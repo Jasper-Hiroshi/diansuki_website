@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="點酥Susu 歌单 — 歌曲合集">
+  <title>歌 · 點酥き</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/logo1.png">
+</head>
+<body>
+  <nav class="site-nav" aria-label="站点导航">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html"><span class="text-cn">點酥</span><span class="text-en">き</span></a>
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">首页</a></li>
+        <li><a class="site-nav__link" href="widgets.html">小组件</a></li>
+        <li><a class="site-nav__link" href="fanworks.html">二创</a></li>
+        <li><a class="site-nav__link" href="columns.html">专栏</a></li>
+        <li><a class="site-nav__link site-nav__link--active" href="songs.html">歌</a></li>
+        <li><a class="site-nav__link" href="calendar.html">直播日历</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+    <h1 class="songs-title">歌单</h1>
+
+    <section class="songs-card" aria-label="歌单列表">
+      <div class="dyn-filters">
+        <input class="dyn-filters__input" type="search" id="filter-song" placeholder="搜索歌曲名…" aria-label="搜索歌曲名">
+      </div>
+
+      <ul class="songs-list" id="songs-list" aria-label="歌曲列表">
+        <!-- JS 渲染 -->
+      </ul>
+    </section>
+  </main>
+
+  <div class="audio-bar" id="audio-bar" hidden>
+    <div class="audio-bar__inner">
+      <button class="audio-bar__mode" id="audio-bar-mode" type="button">顺序</button>
+      <button class="audio-bar__prev" id="audio-bar-prev" type="button" title="上一首">⏮</button>
+      <button class="audio-bar__play" type="button" title="播放">▶</button>
+      <button class="audio-bar__next" id="audio-bar-next" type="button" title="下一首">⏭</button>
+      <img class="audio-bar__cover" id="audio-bar-cover" src="" alt="">
+      <div class="audio-bar__info">
+        <span class="audio-bar__song-title"></span>
+        <span class="audio-bar__note"></span>
+      </div>
+      <div class="audio-bar__progress" id="audio-bar-progress">
+        <div class="audio-bar__track">
+          <div class="audio-bar__fill" id="audio-bar-fill"></div>
+        </div>
+      </div>
+      <span class="audio-bar__time" id="audio-bar-time">00:00/00:00</span>
+      <button class="audio-bar__playlist-btn" id="audio-bar-playlist-btn" type="button" title="播放列表">≡</button>
+      <button class="audio-bar__close" type="button" title="关闭">✕</button>
+    </div>
+    <audio id="audio-player" preload="auto"></audio>
+  </div>
+
+  <!-- 播放列表面板 -->
+  <div class="playlist-panel" id="playlist-panel" hidden>
+    <div class="playlist-panel__header">
+      <span class="playlist-panel__title">播放列表</span>
+      <button class="playlist-panel__select-all" id="playlist-select-all" type="button">添加所有歌曲</button>
+      <button class="playlist-panel__clear" id="playlist-clear" type="button">清空歌单</button>
+      <button class="playlist-panel__close" id="playlist-panel-close" type="button">✕</button>
+    </div>
+    <ul class="playlist-panel__list" id="playlist-panel-list"></ul>
+  </div>
+
+  <div class="page-scroll">
+    <button class="page-scroll__btn" type="button" id="scroll-more" aria-label="下一页面" data-next="calendar.html">
+      <span class="chevron" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <script src="js/songs-data.js"></script>
+  <script src="js/songs.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/fab.js"></script>
+</body>
+</html>

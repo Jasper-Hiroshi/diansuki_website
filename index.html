@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="點酥Susu — 个人粉丝站">
+  <title>點酥き</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/logo1.png">
+</head>
+<body>
+  <nav class="site-nav" aria-label="站点导航">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="#"><span class="text-cn">點酥</span><span class="text-en">き</span></a>
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link site-nav__link--active" href="#">首页</a></li>
+        <li><a class="site-nav__link" href="widgets.html">小组件</a></li>
+        <li><a class="site-nav__link" href="fanworks.html">二创</a></li>
+        <li><a class="site-nav__link" href="columns.html">专栏</a></li>
+        <li><a class="site-nav__link" href="songs.html">歌</a></li>
+        <li><a class="site-nav__link" href="calendar.html">直播日历</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero__banner" aria-label="站点背景图轮播">
+        <div class="hero__banner-track" id="banner-track"></div>
+      </div>
+    <div class="hero__inner">
+      <div class="hero__profile">
+        <img
+          class="hero__avatar"
+          src="assets/images/avatar.png"
+          alt="点酥Susu 头像"
+          width="288"
+          height="288"
+          decoding="async"
+        >
+        <h1 class="hero__name"><span class="text-cn">点酥</span><span class="text-en">Susu</span></h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="intro" aria-label="简介与链接">
+      <nav class="intro__links" aria-label="外部链接">
+        <a class="intro__link intro__link--bili" href="https://space.bilibili.com/1323355750" target="_blank" rel="noopener noreferrer">
+          <img class="intro__link-icon" src="assets/images/icon-bilibili.svg" alt="" width="24" height="24" aria-hidden="true">
+          <span>bilibili 主页</span>
+        </a>
+        <a class="intro__link intro__link--live" href="https://live.bilibili.com/1766907940" target="_blank" rel="noopener noreferrer">
+          <img class="intro__link-icon" src="assets/images/icon-bilibili-live.svg" alt="" width="24" height="24" aria-hidden="true">
+          <span>bilibili 直播间</span>
+        </a>
+        <a class="intro__link intro__link--twitter" href="https://x.com/DianSususu" target="_blank" rel="noopener noreferrer">
+          <img class="intro__link-icon" src="assets/images/icon-twitter.svg" alt="" width="22" height="22" aria-hidden="true">
+          <span>Twitter</span>
+        </a>
+        <a class="intro__link intro__link--marshmallow" href="https://marshmallow-qa.com/86ztd424n0k466j?t=AD1Lir&utm_medium=url_text&utm_source=promotio" target="_blank" rel="noopener noreferrer">
+          <img class="intro__link-icon" src="assets/images/icon-marshmallow.svg" alt="" width="20" height="20" aria-hidden="true">
+          <span>棉花糖</span>
+        </a>
+      </nav>
+      <p class="intro__followers">
+        <span class="intro__followers-label">已炼化</span>
+        <span class="intro__followers-count" id="follower-count">109,330</span>
+        <span class="intro__followers-label">兵马酥</span>
+      </p>
+      <div class="catchphrase" aria-live="polite">
+        <p class="catchphrase__text" id="catchphrase-text">算卦看相，童叟无欺！</p>
+      </div>
+    </section>
+
+    <section class="dynamics" aria-labelledby="dynamics-heading">
+      <h2 class="dynamics__heading" id="dynamics-heading">最新动态</h2>
+      <ul class="dynamics__grid">
+        <li class="dynamic-card">
+          <h3 class="dynamic-card__title">周末直播预告来啦</h3>
+          <time class="dynamic-card__date" datetime="2026-05-20">2026-05-20</time>
+          <p class="dynamic-card__summary">本周六晚上 8 点准时开播，欢迎来聊天～</p>
+          <a class="btn btn--card" href="#" target="_blank" rel="noopener noreferrer">查看动态</a>
+        </li>
+        <li class="dynamic-card">
+          <h3 class="dynamic-card__title">新投稿已上传</h3>
+          <time class="dynamic-card__date" datetime="2026-05-18">2026-05-18</time>
+          <p class="dynamic-card__summary">是一首翻唱练习，希望大家喜欢。</p>
+          <a class="btn btn--card" href="#" target="_blank" rel="noopener noreferrer">查看动态</a>
+        </li>
+        <li class="dynamic-card">
+          <h3 class="dynamic-card__title">感谢大家的生日祝福</h3>
+          <time class="dynamic-card__date" datetime="2026-05-15">2026-05-15</time>
+          <p class="dynamic-card__summary">收到了很多暖心留言，真的非常感谢！</p>
+          <a class="btn btn--card" href="#" target="_blank" rel="noopener noreferrer">查看动态</a>
+        </li>
+      </ul>
+      <p class="dynamics__more">
+        <a class="dynamics__more-link" href="dynamics.html">查看更多动态</a>
+      </p>
+    </section>
+  </main>
+
+  <div class="page-scroll">
+    <button class="page-scroll__btn" type="button" id="scroll-more" aria-label="下一页面" data-next="widgets.html">
+      <span class="chevron" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <script src="js/dynamics-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/fab.js"></script>
+</body>
+</html>

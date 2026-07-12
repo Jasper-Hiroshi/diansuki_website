@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"from PIL import Image; img=Image.open\\('d:/dsss_website/assets/images/avatar.png'\\); print\\('Size:', img.size, 'Mode:', img.mode\\)\")",
+      "Bash(mkdir -p d:/dsss_website/scripts && echo \"ok\")",
+      "Bash(python -c ' *)"
+    ],
+    "additionalDirectories": [
+      "d:\\dsss_website"
+    ]
+  }
+}

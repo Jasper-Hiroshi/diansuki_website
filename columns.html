@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="點酥Susu 专栏 — 文章归档">
+  <title>专栏 · 點酥き</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/logo1.png">
+</head>
+<body>
+  <nav class="site-nav" aria-label="站点导航">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html"><span class="text-cn">點酥</span><span class="text-en">き</span></a>
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">首页</a></li>
+        <li><a class="site-nav__link" href="widgets.html">小组件</a></li>
+        <li><a class="site-nav__link" href="fanworks.html">二创</a></li>
+        <li><a class="site-nav__link site-nav__link--active" href="columns.html">专栏</a></li>
+        <li><a class="site-nav__link" href="songs.html">歌</a></li>
+        <li><a class="site-nav__link" href="calendar.html">直播日历</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="cols">
+      <!-- 左栏：民俗小知识 -->
+      <section class="cols__item" id="col-left" aria-labelledby="col-left-title">
+        <h2 class="cols__item-title" id="col-left-title">点酥的非严谨民俗小知识</h2>
+        <div class="dyn-filters">
+          <div class="dyn-date-picker" id="date-picker-left">
+            <button class="dyn-filters__input dyn-date-picker__btn" type="button" id="date-picker-btn-left">按日期检索</button>
+            <button class="dyn-date-picker__clear" type="button" id="date-picker-clear-left" title="清除日期" hidden>✕</button>
+            <div class="dyn-date-picker__drop" id="date-picker-drop-left"></div>
+          </div>
+          <input class="dyn-filters__input" type="search" id="filter-keyword-left" placeholder="搜索文章…" aria-label="关键词搜索">
+        </div>
+        <ul class="col-articles" id="col-list-left" aria-label="文章列表">
+          <!-- JS 渲染 -->
+        </ul>
+      </section>
+
+      <!-- 右栏：怪文书 -->
+      <section class="cols__item" id="col-right" aria-labelledby="col-right-title">
+        <h2 class="cols__item-title" id="col-right-title">兵马酥的怪文书</h2>
+        <div class="dyn-filters">
+          <div class="dyn-date-picker" id="date-picker-right">
+            <button class="dyn-filters__input dyn-date-picker__btn" type="button" id="date-picker-btn-right">按日期检索</button>
+            <div class="dyn-date-picker__drop" id="date-picker-drop-right"></div>
+          </div>
+          <input class="dyn-filters__input" type="search" id="filter-keyword-right" placeholder="搜索文章…" aria-label="关键词搜索">
+        </div>
+        <ul class="col-articles" id="col-list-right" aria-label="文章列表">
+          <!-- JS 渲染 -->
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <!-- 文章全文 overlay -->
+  <div class="article-overlay" id="article-overlay" hidden>
+    <div class="article-overlay__header">
+      <h2 class="article-overlay__title" id="article-overlay-title"></h2>
+      <button class="article-overlay__close" type="button" id="article-overlay-close" title="关闭">✕</button>
+    </div>
+    <div class="article-overlay__body" id="article-overlay-body"></div>
+  </div>
+
+  <div class="page-scroll">
+    <button class="page-scroll__btn" type="button" id="scroll-more" aria-label="下一页面" data-next="songs.html">
+      <span class="chevron" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <script src="js/columns-data.js"></script>
+  <script src="js/columns.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/fab.js"></script>
+</body>
+</html>

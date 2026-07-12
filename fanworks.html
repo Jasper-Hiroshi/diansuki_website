@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="點酥Susu 二创 — 粉丝创作归档">
+  <title>二创 · 點酥き</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/logo1.png">
+</head>
+<body>
+  <nav class="site-nav" aria-label="站点导航">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html"><span class="text-cn">點酥</span><span class="text-en">き</span></a>
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">首页</a></li>
+        <li><a class="site-nav__link" href="widgets.html">小组件</a></li>
+        <li><a class="site-nav__link site-nav__link--active" href="fanworks.html">二创</a></li>
+        <li><a class="site-nav__link" href="columns.html">专栏</a></li>
+        <li><a class="site-nav__link" href="songs.html">歌</a></li>
+        <li><a class="site-nav__link" href="calendar.html">直播日历</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+    <header class="fw-header">
+      <a class="fw-header__title" href="https://www.bilibili.com/v/topic/detail?topic_id=1206982&topic_name=%E7%82%B9%E9%85%A5%E7%9A%84%E5%85%B5%E9%A9%AC%E6%8C%87%E6%8C%A5%E5%8F%B8&spm_id_from=333.1365.list.card_topic.click" target="_blank" rel="noopener noreferrer">#点酥的兵马指挥司</a>
+    </header>
+
+    <div class="dyn-filters" style="margin-bottom:0.5rem">
+      <input class="dyn-filters__input" type="search" id="filter-author" placeholder="搜索作者…" aria-label="搜索作者">
+      <input class="dyn-filters__input" type="search" id="filter-vtitle" placeholder="搜索视频标题…" aria-label="搜索视频标题">
+    </div>
+
+    <nav class="fw-categories" aria-label="二创分类">
+      <button class="fw-categories__tag fw-categories__tag--active" type="button" data-category="">全部</button>
+      <button class="fw-categories__tag" type="button" data-category="作画">作画</button>
+      <button class="fw-categories__tag" type="button" data-category="生活">生活</button>
+      <button class="fw-categories__tag" type="button" data-category="AI">AI</button>
+      <button class="fw-categories__tag" type="button" data-category="3D">3D</button>
+      <button class="fw-categories__tag" type="button" data-category="周边无料">周边无料</button>
+      <button class="fw-categories__tag" type="button" data-category="动画">动画</button>
+      <button class="fw-categories__tag" type="button" data-category="游戏">游戏</button>
+      <button class="fw-categories__tag" type="button" data-category="特摄">特摄</button>
+      <button class="fw-categories__tag" type="button" data-category="设计">设计</button>
+      <button class="fw-categories__tag" type="button" data-category="视频">视频</button>
+      <button class="fw-categories__tag" type="button" data-category="其他">其他</button>
+    </nav>
+
+    <div class="fw-list" id="fw-list" aria-label="二创列表">
+      <!-- JS 渲染 -->
+    </div>
+  </main>
+
+  <div class="page-scroll">
+    <button class="page-scroll__btn" type="button" id="scroll-more" aria-label="下一页面" data-next="columns.html">
+      <span class="chevron" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <script src="js/fanworks-data.js"></script>
+  <script src="js/fanworks.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/fab.js"></script>
+</body>
+</html>

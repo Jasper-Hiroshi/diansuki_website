@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="點酥Susu 动态 — 历史动态归档">
+  <title>动态 · 點酥き</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/images/logo1.png">
+</head>
+<body>
+  <nav class="site-nav" aria-label="站点导航">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="index.html"><span class="text-cn">點酥</span><span class="text-en">き</span></a>
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="index.html">首页</a></li>
+        <li><a class="site-nav__link" href="widgets.html">小组件</a></li>
+        <li><a class="site-nav__link" href="fanworks.html">二创</a></li>
+        <li><a class="site-nav__link" href="columns.html">专栏</a></li>
+        <li><a class="site-nav__link" href="songs.html">歌</a></li>
+        <li><a class="site-nav__link" href="calendar.html">直播日历</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="dyn-filters">
+      <div class="dyn-date-picker" id="date-picker">
+        <button class="dyn-filters__input dyn-date-picker__btn" type="button" id="date-picker-btn">按日期检索</button>
+        <button class="dyn-date-picker__clear" type="button" id="date-picker-clear" title="清除日期" hidden>✕</button>
+        <div class="dyn-date-picker__drop" id="date-picker-drop"></div>
+      </div>
+      <input class="dyn-filters__input" type="search" id="filter-keyword" placeholder="搜索关键词…" aria-label="关键词搜索">
+    </div>
+
+    <div class="dyn-nav" aria-label="日期导航">
+      <button class="dyn-nav__btn" type="button" id="dyn-prev" aria-label="上一条动态日期">&lt;</button>
+      <span class="dyn-nav__date" id="dyn-date">2026.05.20</span>
+      <button class="dyn-nav__btn" type="button" id="dyn-next" aria-label="下一条动态日期">&gt;</button>
+    </div>
+
+    <div class="dyn-list" id="dyn-list" aria-label="动态列表">
+      <!-- JS 动态渲染 -->
+    </div>
+  </main>
+
+  <div class="page-scroll">
+    <button class="page-scroll__btn" type="button" id="scroll-more" aria-label="返回顶部">
+      <span class="chevron" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <script src="js/dynamics-data.js"></script>
+  <script src="js/dynamics.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/fab.js"></script>
+</body>
+</html>
