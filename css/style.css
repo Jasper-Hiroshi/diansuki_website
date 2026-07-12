@@ -452,7 +452,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   .fw-categories { gap: 0.35rem; }
   .fw-categories__tag { padding: 0.32rem 0.75rem; font-size: 0.85rem; }
   .cols { grid-template-columns: 1fr; gap: 1rem; }
-  .cols__item { padding: 1rem 0.8rem; transform: none; margin-right: 0.5rem; }
+  .cols__item { padding: 1rem 1rem; transform: none; }
   .cols__item-title { font-size: 1rem; padding: 0.25rem 0.5rem; }
   .col-articles__title { font-size: 0.85rem; }
   .col-articles__date { font-size: 0.78rem; }
