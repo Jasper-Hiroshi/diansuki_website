@@ -19,6 +19,17 @@ var dynamicsData = [
     "date": "2026-07-10",
     "dynamics": [
       {
+        "time": "23:31",
+        "content": "今天一整天都万里无云，感觉明天的台风会很强…",
+        "link": "https://t.bilibili.com/1223460458395074582?spm_id_from=333.1387.0.0",
+        "repost": {
+          "title": "今天一整天都万里无云，感觉明天的台风会很强…",
+          "link": "https://www.bilibili.com/video/BV13bNH6hEMv/?spm_id_from=333.1368.list.card_archive.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+          "type": "post_video",
+          "cover": "assets/images/dynamics/07_10_2.jpg"
+        }
+      },
+      {
         "time": "12:11",
         "content": "谢谢兵马酥一直都有在看着我😢看预告就已经超级感动了，真的谢谢每一位",
         "link": "https://t.bilibili.com/1223285197954351112?spm_id_from=333.1387.0.0",
@@ -30,17 +41,6 @@ var dynamicsData = [
           "content": "【预告片】出道2周年纪念视频【点酥Susu】\nVirtuaReal所属第23期生“点酥Susu”的粉丝向纪念视频，该视频为预告片，完整版将于2026月7月11日中午12点整发布，敬请期待！",
           "dynamic_link": "https://t.bilibili.com/1223019506964627462?spm_id_from=333.1368.0.0",
           "cover": "assets/images/dynamics/07_10_1.jpg"
-        }
-      },
-      {
-        "time": "23:31",
-        "content": "今天一整天都万里无云，感觉明天的台风会很强…",
-        "link": "https://t.bilibili.com/1223460458395074582?spm_id_from=333.1387.0.0",
-        "repost": {
-          "title": "今天一整天都万里无云，感觉明天的台风会很强…",
-          "link": "https://www.bilibili.com/video/BV13bNH6hEMv/?spm_id_from=333.1368.list.card_archive.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
-          "type": "post_video",
-          "cover": "assets/images/dynamics/07_10_2.jpg"
         }
       }
     ]
