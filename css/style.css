@@ -450,6 +450,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   .dyn-nav__btn { width: 36px; height: 36px; font-size: 1.1rem; }
   .dyn-nav__date { font-size: 1.2rem; }
   .dyn-card__body, .dyn-card__footer { padding-left: 0; margin-left: 0; }
+  .dyn-card__img { max-width: 100%; max-height: 160px; }
+  .dyn-card__images--compact { grid-template-columns: repeat(3, 55px); }
+  .dyn-card__images--compact .dyn-card__img { max-height: none; }
   .dyn-repost { margin-left: 0.5rem; margin-right: 0.5rem; }
   .widgets__grid { grid-template-columns: 1fr; gap: 1rem; }
   .fw-categories { gap: 0.35rem; }
