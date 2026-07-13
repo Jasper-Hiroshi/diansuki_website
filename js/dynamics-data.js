@@ -16,6 +16,80 @@
  */
 var dynamicsData = [
   {
+    "date": "2026-07-12",
+    "dynamics": [
+      {
+        "time": "19:01",
+        "content": "到bw舞台了！谢谢你带酥酥过去庆祝！！\n大家回家的时候也注意安全！",
+        "link": "https://t.bilibili.com/1224133101805895700?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "白桃半甜少冰",
+          "content": "出道二周年快乐！\n周年当然要美美出门玩！！\n@点酥Susu ​",
+          "link": "https://www.bilibili.com/opus/1223746297017663510?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_12_1.jpg",
+            "assets/images/dynamics/07_12_2.jpg",
+            "assets/images/dynamics/07_12_3.jpg",
+            "assets/images/dynamics/07_12_4.jpg"
+          ]
+        }
+      },
+      {
+        "time": "19:00",
+        "content": "用任何语言表达现在的心情都感觉太苍白了，感谢也祝贺每一位一起成长的同伴，祝每一位兵马酥都能有在自己人生的道路上向前的力量",
+        "link": "https://t.bilibili.com/1224132822617292805?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "恋老吧吧主",
+          "title": "【点酥Susu】「らしさ」本真【出道二周年快乐】",
+          "link": "https://www.bilibili.com/video/BV1zzMp6WEmC/?spm_id_from=333.1387.list.card_archive.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+          "type": "video",
+          "content": "各位好！这边是『冰美式制作组』，是主播点酥Susu的“普通粉丝结社”，希望制作与她相关的内容和无料谷。\n让我们祝贺点酥Susu出道二周年快乐！\n今年也是一样的，在本月内，会放出该曲目主题的免费无料周边给大家（会在26年8月开始逐步发货），具体什么条件和身份可以拿到这些无料周边，有兴趣的请查看UP主“恋老吧吧主”的B站动态~",
+          "dynamic_link": "https://t.bilibili.com/1223653409767293073?spm_id_from=333.1387.0.0",
+          "cover": "assets/images/dynamics/07_12_5.jpg"
+        }
+      },
+      {
+        "time": "18:58",
+        "content": "转发动态",
+        "link": "https://t.bilibili.com/1224132191255003156?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "恋老吧吧主",
+          "content": "点酥Susu出道2周年纪念无料赠礼来啦！\n大家好！这边是『冰美式制作组』！\n是主播 @点酥Susu​ 的“普通粉丝结社”，希望制作与她相关的内容和无料谷。\n\n本期的赠礼是：\n① 点酥Susu表情包 +《らしさ》主题贴纸\n冰美式制作组联合 @明灯盏盏zzz​ ，制作了一套点酥Susu的新表情包（14枚），加上@AAA兵部杂鱼小张​ 和明灯盏盏zzz的合绘、《らしさ》主视觉图，共同置入一套贴纸上。\n这套新表情包后续将会以B站动态等形式，发送给大家！欢迎大家使用！\n② 点酥Susu《らしさ》主题吧唧1枚\n③ 点酥Susu《らしさ》主题打卡立牌 每套3支\n④ 点酥Susu 冰霜银烫色邮票1张（由 @一只弥鸢​ 老师提供）\n⑤ 点酥Susu《サリシノハラ》主题吧唧1枚+像素小立牌 1枚(A/B款)（由 @阿鱼今天摸了吗​ 老师提供） \n\n视频的观前提示、赠礼详情、满足获赠的标准等重要提示，都在长图中！大家可以点开大图查看！",
+          "link": "https://www.bilibili.com/opus/1223653364708933652?spm_id_from=333.1368.0.0",
+          "images": [
+            "assets/images/dynamics/07_12_6.png"
+          ]
+        }
+      },
+      {
+        "time": "18:58",
+        "content": "转发动态",
+        "link": "https://t.bilibili.com/1224132174099251201?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "恋老吧吧主",
+          "content": "​​点酥Susu出道2周年 新版表情包！\n大家好！这边是『冰美式制作组』！\n是主播 @点酥Susu​ 的“普通粉丝结社”，希望制作与她相关的内容和无料谷。\n冰美式制作组联合 @明灯盏盏zzz​ ，制作了一套点酥Susu的新表情包（14枚），发送给大家！欢迎大家使用！\n本次的表情包，尝试复刻了点酥Susu最早一套表情包的画风和笔触效果，希望各位能喜欢！\n\n（别逗你酥姐笑了）",
+          "link": "https://www.bilibili.com/opus/1223653364670136369?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_12_7.png",
+            "assets/images/dynamics/07_12_8.png",
+            "assets/images/dynamics/07_12_9.png",
+            "assets/images/dynamics/07_12_10.png",
+            "assets/images/dynamics/07_12_11.png",
+            "assets/images/dynamics/07_12_12.png",
+            "assets/images/dynamics/07_12_13.png",
+            "assets/images/dynamics/07_12_14.png",
+            "assets/images/dynamics/07_12_15.png",
+            "assets/images/dynamics/07_12_16.png",
+            "assets/images/dynamics/07_12_17.png",
+            "assets/images/dynamics/07_12_18.png",
+            "assets/images/dynamics/07_12_19.png",
+            "assets/images/dynamics/07_12_20.png"
+          ]
+        }
+      }
+    ]
+  },
+  {
     "date": "2026-07-10",
     "dynamics": [
       {

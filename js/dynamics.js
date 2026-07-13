@@ -365,6 +365,10 @@
     escaped = escaped.replace(/@点酥Susu/g, "<span class=\"mention\">@点酥Susu</span>");
     escaped = escaped.replace(/@雨纪_Ameki/g, "<span class=\"mention\">@雨纪_Ameki</span>");
     escaped = escaped.replace(/@花礼Harei/g, "<span class=\"mention\">@花礼Harei</span>");
+    escaped = escaped.replace(/@明灯盏盏zzz​/g, "<span class=\"mention mention--blue\">@明灯盏盏zzz</span>");
+    escaped = escaped.replace(/@AAA兵部杂鱼小张/g, "<span class=\"mention mention--blue\">@AAA兵部杂鱼小张</span>");
+    escaped = escaped.replace(/@一只弥鸢​/g, "<span class=\"mention mention--blue\">@一只弥鸢</span>");
+    escaped = escaped.replace(/@阿鱼今天摸了吗​/g, "<span class=\"mention mention--blue\">@阿鱼今天摸了吗</span>");
     escaped = escaped.replace(/#にじさんじ8周年#/g, "<span class=\"mention\">#にじさんじ8周年#</span>");
     escaped = escaped.replace(/#にじさんじの日#/g, "<span class=\"mention\">#にじさんじの日#</span>");
     return escaped;
