@@ -328,6 +328,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .audio-bar__playlist-btn { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; font-size: 1.2rem; font-weight: 700; color: #000; background: #fff; border: 2px solid #000; flex-shrink: 0; transition: background 0.15s; }
 .audio-bar__playlist-btn:hover { background: #000; color: var(--color-primary); }
 
+.audio-bar__volume { width: 60px; height: 4px; flex-shrink: 0; accent-color: var(--color-primary); cursor: pointer; }
+
 /* --- Playlist panel --- */
 .playlist-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 380px; max-width: 92vw; z-index: 250; background: #fff; border-left: 3px solid #000; box-shadow: -5px 0 0px #000; display: flex; flex-direction: column; transform: translateX(100%); transition: transform 0.3s; }
 .playlist-panel--open { transform: translateX(0); }
@@ -470,6 +472,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   .audio-bar__close { width: 22px; height: 22px; font-size: 0.75rem; }
   .audio-bar__mode { height: 22px; padding: 0 0.3rem; font-size: 0.6rem; }
   .audio-bar__playlist-btn { width: 22px; height: 22px; font-size: 0.75rem; }
+  .audio-bar__volume { width: 40px; }
   .playlist-panel { width: 92vw; }
   .playlist-panel__header { gap: 0.4rem; padding: 0.7rem 0.75rem; }
   .playlist-panel__title { font-size: 1rem; }

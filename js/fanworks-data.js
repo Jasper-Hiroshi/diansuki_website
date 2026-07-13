@@ -15,6 +15,68 @@
  */
 var fanworksData = [
   {
+    "id": "恋老吧吧主",
+    "idLink": "https://space.bilibili.com/3493134610729321/upload/video",
+    "groups": [
+      {
+        "date": "",
+        "images": [
+          "assets/images/creation/llbbz_1.jpg"
+        ],
+        "title": "【点酥Susu】テレキャスタービーボーイ【一周年快乐】",
+        "link": "https://www.bilibili.com/video/BV1kKG5zZE7d/?spm_id_from=333.1387.upload.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+        "tags": [
+          "动画",
+          "视频"
+        ],
+        "isVideo": true,
+        "likes": 859
+      },
+      {
+        "date": "",
+        "images": [
+          "assets/images/creation/llbbz_2.jpg"
+        ],
+        "title": "【点酥Susu】「らしさ」本真【出道二周年快乐】",
+        "link": "https://www.bilibili.com/video/BV1zzMp6WEmC/?spm_id_from=333.1387.list.card_archive.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+        "tags": [
+          "作画",
+          "动画",
+          "视频"
+        ],
+        "isVideo": true,
+        "likes": 265
+      },
+      {
+        "date": "2026-07-11",
+        "images": [
+          "assets/images/creation/07_12_7.png",
+          "assets/images/creation/07_12_8.png",
+          "assets/images/creation/07_12_9.png",
+          "assets/images/creation/07_12_10.png",
+          "assets/images/creation/07_12_11.png",
+          "assets/images/creation/07_12_12.png",
+          "assets/images/creation/07_12_13.png",
+          "assets/images/creation/07_12_14.png",
+          "assets/images/creation/07_12_15.png",
+          "assets/images/creation/07_12_16.png",
+          "assets/images/creation/07_12_17.png",
+          "assets/images/creation/07_12_18.png",
+          "assets/images/creation/07_12_19.png",
+          "assets/images/creation/07_12_20.png"
+        ],
+        "title": "",
+        "link": "https://www.bilibili.com/opus/1223653364670136369?spm_id_from=333.1387.0.0",
+        "tags": [
+          "作画",
+          "设计"
+        ],
+        "likes": 21
+      }
+    ],
+    "likes": 1145
+  },
+  {
     "id": "冰镇の小白花",
     "idLink": "https://space.bilibili.com/4813105/dynamic?spm_id_from=333.1035.list.card_title.click",
     "groups": [
@@ -110,27 +172,6 @@ var fanworksData = [
       }
     ],
     "likes": 1065
-  },
-  {
-    "id": "恋老吧吧主",
-    "idLink": "https://space.bilibili.com/3493134610729321/upload/video",
-    "groups": [
-      {
-        "date": "",
-        "images": [
-          "assets/images/creation/llbbz_1.jpg"
-        ],
-        "title": "【点酥Susu】テレキャスタービーボーイ【一周年快乐】",
-        "link": "https://www.bilibili.com/video/BV1kKG5zZE7d/?spm_id_from=333.1387.upload.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
-        "tags": [
-          "动画",
-          "视频"
-        ],
-        "isVideo": true,
-        "likes": 859
-      }
-    ],
-    "likes": 859
   },
   {
     "id": "也许是710",
@@ -491,6 +532,39 @@ var fanworksData = [
       }
     ],
     "likes": 159
+  },
+  {
+    "id": "漓梦い清玥",
+    "idLink": "https://space.bilibili.com/12769903/dynamic?spm_id_from=333.1035.list.card_title.click",
+    "groups": [
+      {
+        "date": "",
+        "images": [
+          "assets/images/creation/lmdqy_2.jpg"
+        ],
+        "title": "【点酥Susu】☯出道二周年快乐☯「兵马酥祝语合集」",
+        "link": "https://www.bilibili.com/video/BV1amNn6bEa7/?spm_id_from=333.1035.list.card_archive.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+        "tags": [
+          "视频"
+        ],
+        "isVideo": true,
+        "likes": 103
+      },
+      {
+        "date": "2025-02-12",
+        "images": [
+          "assets/images/creation/lmdqy_1.jpg"
+        ],
+        "title": "",
+        "link": "https://www.bilibili.com/opus/1032730057521496069?spm_id_from=333.1035.0.0",
+        "tags": [
+          "动态",
+          "作画"
+        ],
+        "likes": 40
+      }
+    ],
+    "likes": 143
   },
   {
     "id": "茶歌本鸽",
@@ -861,26 +935,6 @@ var fanworksData = [
       }
     ],
     "likes": 41
-  },
-  {
-    "id": "漓梦い清玥",
-    "idLink": "https://space.bilibili.com/12769903/dynamic?spm_id_from=333.1035.list.card_title.click",
-    "groups": [
-      {
-        "date": "2025-02-12",
-        "images": [
-          "assets/images/creation/lmdqy_1.jpg"
-        ],
-        "title": "",
-        "link": "https://www.bilibili.com/opus/1032730057521496069?spm_id_from=333.1035.0.0",
-        "tags": [
-          "动态",
-          "作画"
-        ],
-        "likes": 40
-      }
-    ],
-    "likes": 40
   },
   {
     "id": "莜希Yuki",
