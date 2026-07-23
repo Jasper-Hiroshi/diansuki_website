@@ -118,6 +118,32 @@ def main():
     time_str = input("时间 (HH:MM): ").strip()
     title    = input("标题: ").strip()
 
+    # 选题与分类
+    TOPICS = {
+        "1": ("杂谈", ["早台", "古文", "粉丝投稿", "晚台", "视听", "专题", "竖屏", "工作", "午台"]),
+        "2": ("游戏", ["悬恐解", "3A", "AVG", "休闲", "体感", "模拟经营", "网游", "棋牌", "音游"]),
+        "3": ("音声", ["日常", "专题"]),
+        "4": ("联动", ["游戏", "杂谈"]),
+    }
+    print("\n选题：")
+    for k, v in TOPICS.items():
+        print(f"  {k}. {v[0]}")
+    topic_choice = input("选题编号（可回车跳过）: ").strip()
+    topic = ""
+    category = ""
+    if topic_choice in TOPICS:
+        topic, cats = TOPICS[topic_choice]
+        print(f"  ✓ {topic}")
+        print(f"\n分类（{topic}）：")
+        for i, c in enumerate(cats, 1):
+            print(f"  {i}. {c}")
+        cat_choice = input("分类编号（可回车跳过）: ").strip()
+        if cat_choice.isdigit():
+            idx = int(cat_choice) - 1
+            if 0 <= idx < len(cats):
+                category = cats[idx]
+                print(f"  ✓ {category}")
+
     print("\n封面图（文件路径，无则回车）:")
     cover_input = input("> ").strip()
     cover = None
@@ -129,6 +155,10 @@ def main():
     link = input("回放链接: ").strip()
 
     stream = {"time": time_str, "title": title, "link": link}
+    if topic:
+        stream["topic"] = topic
+    if category:
+        stream["category"] = category
     if cover:
         stream["cover"] = cover
     else:
@@ -141,6 +171,7 @@ def main():
     for entry in data:
         if entry["date"] == date_str:
             entry["streams"].append(stream)
+            entry["streams"].sort(key=lambda s: s["time"].zfill(5))
             found = True
             break
 

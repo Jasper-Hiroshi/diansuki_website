@@ -13,6 +13,17 @@
 var calendarData = {
   streams: [
       {
+        "date": "2026-07-17",
+        "streams": [
+          {
+            "time": "02:00",
+            "title": "新一年希望少吃零食多吃青菜",
+            "link": "https://www.bilibili.com/video/BV17XK56REEJ/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "cover": "assets/images/stream/0717.jpg"
+          }
+        ]
+      },
+      {
         "date": "2026-07-03",
         "streams": [
           {
@@ -500,6 +511,454 @@ var calendarData = {
             "title": "今晚宝可梦！破晓之翼与~宝可梦朱P4~",
             "link": "https://www.bilibili.com/video/BV1NY6hBYE9Y/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
             "cover": "assets/images/stream/0201.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-08-08",
+        "streams": [
+          {
+            "time": "8:00",
+            "title": "百日筑基第拾伍天",
+            "link": "https://www.bilibili.com/video/BV1PT421r76F/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/08_08_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-08-07",
+        "streams": [
+          {
+            "time": "9:00",
+            "title": "百日筑基第拾肆天",
+            "link": "https://www.bilibili.com/video/BV1YT421678D/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/08_07_1.jpg"
+          },
+          {
+            "time": "21:00",
+            "title": "继续《饿殍明末千里行》！",
+            "link": "https://www.bilibili.com/video/BV1HU411S77r/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "AVG",
+            "cover": "assets/images/stream/08_07_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-08-06",
+        "streams": [
+          {
+            "time": "8:00",
+            "title": "百日筑基第拾叁天",
+            "link": "https://www.bilibili.com/video/BV1hr421K7X1/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/08_06_1.jpg"
+          },
+          {
+            "time": "14:00",
+            "title": "三伏天玩玩《三伏》",
+            "link": "https://www.bilibili.com/video/BV1v4421Z7W6/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "悬恐解",
+            "cover": "assets/images/stream/08_06_2.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-08-05",
+        "streams": [
+          {
+            "time": "8:00",
+            "title": "筑基第拾贰天",
+            "link": "https://www.bilibili.com/video/BV1EW42197tG/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/08_05_1.jpg"
+          },
+          {
+            "time": "21:00",
+            "title": "来点《剑来》！",
+            "link": "https://www.bilibili.com/video/BV1oZ421N7pE/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "古文",
+            "cover": "assets/images/stream/08_05_2.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-08-04",
+        "streams": [
+          {
+            "time": "15:00",
+            "title": "这就是现代型炼丹吗......",
+            "link": "https://www.bilibili.com/video/BV1Rf421q7hK/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "粉丝投稿",
+            "cover": "assets/images/stream/08_04_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-08-03",
+        "streams": [
+          {
+            "time": "21:00",
+            "title": "练练歌唠唠嗑",
+            "link": "https://www.bilibili.com/video/BV1df421v7BW/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "音声",
+            "category": "日常",
+            "cover": "assets/images/stream/08_03_21.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-08-02",
+        "streams": [
+          {
+            "time": "8:00",
+            "title": "百日筑基第拾壹天",
+            "link": "https://www.bilibili.com/video/BV12U411U7ao/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/08_02_1.jpg"
+          },
+          {
+            "time": "20:00",
+            "title": "黄儿读《饿殍：明末千里行》",
+            "link": "https://www.bilibili.com/video/BV1nr421M7gH/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "AVG",
+            "cover": "assets/images/stream/08_02_2.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-08-01",
+        "streams": [
+          {
+            "time": "8:00",
+            "title": "百日筑基第拾天",
+            "link": "https://www.bilibili.com/video/BV1oy411e7PM/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/08_01_1.jpg"
+          },
+          {
+            "time": "15:00",
+            "title": "三伏天玩《三伏》",
+            "link": "https://www.bilibili.com/video/BV1qy411i7XD/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "悬恐解",
+            "cover": "assets/images/stream/08_01_2.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-31",
+        "streams": [
+          {
+            "time": "9:00",
+            "title": "百日筑基第玖天",
+            "link": "https://www.bilibili.com/video/BV11y411i7D9/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/07_31_1.jpg"
+          },
+          {
+            "time": "20:00",
+            "title": "睡前一起看《饿殍：明末千里行》故事",
+            "link": "https://www.bilibili.com/video/BV1Pm421374d/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "AVG",
+            "cover": "assets/images/stream/07_31_2.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-30",
+        "streams": [
+          {
+            "time": "8:00",
+            "title": "百日筑基第捌天",
+            "link": "https://www.bilibili.com/video/BV1vZ421N7Xp/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/07_30_2.jpg"
+          },
+          {
+            "time": "15:00",
+            "title": "中伏天玩三伏",
+            "link": "https://www.bilibili.com/video/BV1zb421J7zg/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "悬恐解",
+            "cover": "assets/images/stream/07_30_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-29",
+        "streams": [
+          {
+            "time": "9:00",
+            "title": "百日筑基第柒天",
+            "link": "https://www.bilibili.com/video/BV1hb421J7YY/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/07_29_1.jpg"
+          },
+          {
+            "time": "22:00",
+            "title": "睡前嘟嘟《聊斋》第三回",
+            "link": "https://www.bilibili.com/video/BV1E4421S7vN/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "古文",
+            "cover": "assets/images/stream/2024_07_29.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-28",
+        "streams": [
+          {
+            "time": "15:00",
+            "title": "搞点提神醒脑的登西！",
+            "link": "https://www.bilibili.com/video/BV12b421E7LE/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "粉丝投稿",
+            "cover": "assets/images/stream/07_28_1.jpg"
+          },
+          {
+            "time": "21:00",
+            "title": "山外玩儿这么花？！睡前《喻世明言》",
+            "link": "https://www.bilibili.com/video/BV1Km42137iN/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "古文",
+            "cover": "assets/images/stream/07_28_2.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-27",
+        "streams": [
+          {
+            "time": "21:00",
+            "title": "音律修行！",
+            "link": "https://www.bilibili.com/video/BV1Pb42177Mb/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "音声",
+            "category": "日常",
+            "cover": "assets/images/stream/07_27_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-26",
+        "streams": [
+          {
+            "time": "8:00",
+            "title": "百日筑基第陆天",
+            "link": "https://www.bilibili.com/video/BV1Uw4m1r75C/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/07_26_1.jpg"
+          },
+          {
+            "time": "15:00",
+            "title": "今日探完女鬼桥2！",
+            "link": "https://www.bilibili.com/video/BV1kS411w7Ln/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "悬恐解",
+            "cover": "assets/images/stream/07_26_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-25",
+        "streams": [
+          {
+            "time": "9:00",
+            "title": "百日筑基第伍天",
+            "link": "https://www.bilibili.com/video/BV1cS421d714/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/07_25_1.jpg"
+          },
+          {
+            "time": "22:00",
+            "title": "睡前嘟嘟《聊斋》",
+            "link": "https://www.bilibili.com/video/BV1Zx4y1x71W/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "古文",
+            "cover": "assets/images/stream/07_25_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-24",
+        "streams": [
+          {
+            "time": "8:00",
+            "title": "百日筑基第肆天",
+            "link": "https://www.bilibili.com/video/BV1Cz421i72f/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/07_24_1.jpg"
+          },
+          {
+            "time": "14:00",
+            "title": "再探《女鬼桥》！",
+            "link": "https://www.bilibili.com/video/BV1UM4m1y7hM/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "悬恐解",
+            "cover": "assets/images/stream/07_24_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-23",
+        "streams": [
+          {
+            "time": "9:00",
+            "title": "百日筑基第叁天",
+            "link": "https://www.bilibili.com/video/BV1mr421M7FT/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/07_23_1.jpg"
+          },
+          {
+            "time": "21:00",
+            "title": "睡前练胆故事",
+            "link": "https://www.bilibili.com/video/BV1nH4y1c7eC/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "古文",
+            "cover": "assets/images/stream/07_23_2.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-22",
+        "streams": [
+          {
+            "time": "14:00",
+            "title": "这里就是女鬼桥2？",
+            "link": "https://www.bilibili.com/video/BV1LW42197kZ/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "悬恐解",
+            "cover": "assets/images/stream/07_22_1.jpg"
+          },
+          {
+            "time": "21:00",
+            "title": "睡前嘟嘟《聊斋》",
+            "link": "https://www.bilibili.com/video/BV12S411w7sU/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "古文",
+            "cover": "assets/images/stream/07_22_2.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-21",
+        "streams": [
+          {
+            "time": "14:00",
+            "title": "聊聊大家的消暑方法",
+            "link": "https://www.bilibili.com/video/BV1jH4y1c7YF/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "粉丝投稿",
+            "cover": "assets/images/stream/07_21_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-20",
+        "streams": [
+          {
+            "time": "15:00",
+            "title": "今日音乐修行",
+            "link": "https://www.bilibili.com/video/BV1ky411e7nQ/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "音声",
+            "category": "日常",
+            "cover": "assets/images/stream/07_20_1.jpg"
+          },
+          {
+            "time": "21:00",
+            "title": "睡前来随便聊聊",
+            "link": "https://www.bilibili.com/video/BV1fS421R7ki/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "晚台",
+            "cover": "assets/images/stream/07_20_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-19",
+        "streams": [
+          {
+            "time": "8:00",
+            "title": "百日筑基第壹天",
+            "link": "https://www.bilibili.com/video/BV114421U7Uk/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/07_19_1.jpg"
+          },
+          {
+            "time": "21:00",
+            "title": "睡前来随便聊聊",
+            "link": "https://www.bilibili.com/video/BV1mW421X7Yk/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "晚台",
+            "cover": "assets/images/stream/07_19_2.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-18",
+        "streams": [
+          {
+            "time": "14:00",
+            "title": "传说中的《八号站台》？！",
+            "link": "https://www.bilibili.com/video/BV1Af421B7Sd/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "悬恐解",
+            "cover": "assets/images/stream/07_18_1.jpg"
+          },
+          {
+            "time": "21:00",
+            "title": "睡前嘟嘟《酉阳杂俎》",
+            "link": "https://www.bilibili.com/video/BV17n4y1f71d/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "古文",
+            "cover": "assets/images/stream/07_18_2.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-17",
+        "streams": [
+          {
+            "time": "8:00",
+            "title": "百日筑基第一天",
+            "link": "https://www.bilibili.com/video/BV16W421R7BB/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/07_17_1.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-16",
+        "streams": [
+          {
+            "time": "19:00",
+            "title": "首次论道",
+            "link": "https://www.bilibili.com/video/BV1nJ4m1M7Xh/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "专题",
+            "cover": "assets/images/stream/07_16_1.jpg"
           }
         ]
       }

@@ -29,6 +29,12 @@
     <section class="cal-card" aria-label="直播日历">
       <div class="dyn-filters">
         <input class="dyn-filters__input" type="search" id="filter-title" placeholder="搜索直播标题…" aria-label="搜索直播标题">
+        <select class="dyn-filters__input cal-filter__select" id="filter-topic" aria-label="选题筛选">
+          <option value="">全部选题</option>
+        </select>
+        <select class="dyn-filters__input cal-filter__select" id="filter-category" aria-label="分类筛选">
+          <option value="">全部分类</option>
+        </select>
         <div class="dyn-date-picker" id="date-picker">
           <button class="dyn-filters__input dyn-date-picker__btn" type="button" id="date-picker-btn">按日期检索</button>
           <div class="dyn-date-picker__drop" id="date-picker-drop"></div>

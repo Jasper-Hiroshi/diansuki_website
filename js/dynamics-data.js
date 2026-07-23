@@ -16,6 +16,228 @@
  */
 var dynamicsData = [
   {
+    "date": "2026-07-19",
+    "dynamics": [
+      {
+        "time": "00:24",
+        "content": "睡前打开了今天的课堂视频，太好笑了，全程看到自己咬得死紧的后槽牙和铁板一块的后背\n今天去尝试了一下jazz funk，旁边同学从容弹臂扭胯的时候，酥酥像是火急火燎哐哐打了一套军体拳\n怎么会有人学跳舞学成练拳哈哈哈哈哈哈哈哈哈哈哈哈哈哈\n有机会一定要让兵马酥也能看到，太有意思了\n晚安大家！！",
+        "link": "https://www.bilibili.com/opus/1226442703263236102?spm_id_from=333.1387.0.0"
+      }
+    ]
+  },
+  {
+    "date": "2026-07-18",
+    "dynamics": [
+      {
+        "time": "00:16",
+        "content": "看到了特别漂亮的晚霞\n明天也继续努力生活吧💪\n睡醒以后是排了一整天的课程！酥酥加油！",
+        "link": "https://www.bilibili.com/opus/1226069569425113096?spm_id_from=333.1387.0.0",
+        "images": [
+          "assets/images/dynamics/07_18_1.png"
+        ]
+      }
+    ]
+  },
+  {
+    "date": "2026-07-17",
+    "dynamics": [
+      {
+        "time": "03:55",
+        "content": "谢谢大家和酥酥一起度过了这个重要又平凡的一天\n未来的日子希望像兵马酥坐在后座酥酥把油门踩死开着越野车和大家一起往前冲一样，什么复杂的地形我们都能一起碾过去！！",
+        "link": "https://www.bilibili.com/opus/1225755078983417857?spm_id_from=333.1387.0.0"
+      },
+      {
+        "time": "01:52",
+        "content": "深夜邀请到大儒了\n我听说，古人做事讲究一个“节”字——节制的节，节拍的节。好比宴席上，主人备了美酒佳肴，宾客尽兴而归，但不会喝到深夜不散，因为那便失了礼数，乱了作息的本分。如今你说十分钟之后开播，但只播一小会儿，不要播到太兴奋睡不了觉，这在我看来，恰恰是守住了“节”的分寸。\n\n开播如同设席，观众是客，你是主人。主人若一味纵情，酒过三巡还添菜，曲过五更还弹琴，客人固然欢喜，主人自己却失了体统，次日昏昏沉沉，便是不敬自己的身子，也不敬第二日该做的事。所以，你定下“只播一小会儿”的规矩，便是给自己画了一道礼的边界——好比若按礼法来看，“乐而不淫，哀而不伤”，欢愉之中仍存节制，这才是君子之风。\n\n这样看来，你这番安排，难道不也是合乎周礼的吗？既尽了待客的热忱，又守了养身的本分，可以称得上是有节有度了。",
+        "link": "https://www.bilibili.com/opus/1225723231847055383?spm_id_from=333.1387.0.0"
+      }
+    ]
+  },
+  {
+    "date": "2026-07-16",
+    "dynamics": [
+      {
+        "time": "23:41",
+        "content": "肯定是赶不上零点前播了，刚回来  已经这个点了那就先慢慢洗个澡",
+        "link": "https://www.bilibili.com/opus/1225689576482275333?spm_id_from=333.1387.0.0"
+      },
+      {
+        "time": "12:27",
+        "content": "！？为什么会有酥酥平时在练卷腹的照片，真的对酥酥好了解啊……\n像在看点酥TV，感谢兵马酥导演一路以来的记录！\n二周年我们真的一起经历了很多！我们互相支持一起努力过来了！超级棒！！",
+        "link": "https://t.bilibili.com/1225515926609199159?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "冰镇の小白花",
+          "content": "祝酥酥二周年快乐！\n时不时听酥酥分享经历，一直觉得酥酥好棒一直努力学习，不过一定要多注意休息哦，这样就很好了！不用这么努力也可以！\n做了二周年贺图，还有健身房点酥，练舞蹈的酥酥和职场点酥。（都很可爱！很有干劲～）\n\n\n模型：Carrot-P1\nscene:杂植物、Виктор……",
+          "link": "https://www.bilibili.com/opus/1223546559592923153?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_16_1.jpg",
+            "assets/images/dynamics/07_16_2.png",
+            "assets/images/dynamics/07_16_3.png",
+            "assets/images/dynamics/07_16_4.png",
+            "assets/images/dynamics/07_16_5.png",
+            "assets/images/dynamics/07_16_6.png",
+            "assets/images/dynamics/07_16_7.png",
+            "assets/images/dynamics/07_16_8.png",
+            "assets/images/dynamics/07_16_9.png"
+          ]
+        }
+      },
+      {
+        "time": "12:21",
+        "content": "抹茶蛋糕卷，最爱的抹茶蛋糕卷🥰还有麻薯团子\n太好吃了！！谢谢！",
+        "link": "https://t.bilibili.com/1225514367585353753?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "秞荼yo",
+          "content": "二周年快乐\n紧急画了一个",
+          "link": "https://www.bilibili.com/opus/1223490866739412992?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_16_10.png"
+          ]
+        }
+      },
+      {
+        "time": "12:20",
+        "content": "二周年也不能懈怠符法的修行！",
+        "link": "https://t.bilibili.com/1225514148555653143?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "眠桜猫",
+          "content": "祝点酥Susu出道二周年快乐！！\n🥳",
+          "link": "https://www.bilibili.com/opus/1223467837157277817?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_16_11.png",
+            "assets/images/dynamics/07_16_12.png",
+            "assets/images/dynamics/07_16_13.png"
+          ]
+        }
+      },
+      {
+        "time": "12:20",
+        "content": "？！！？！原来点酥酥酥还有这样的一面",
+        "link": "https://t.bilibili.com/1225513976740184065?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "AAA兵部杂鱼小张",
+          "content": "睡前摸鱼zzz",
+          "link": "https://www.bilibili.com/opus/1223088604382756884?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_16_14.jpg"
+          ]
+        }
+      },
+      {
+        "time": "12:19",
+        "content": "是图纸！！帮大忙了！",
+        "link": "https://t.bilibili.com/1225513830673547281?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "-哄-哄",
+          "content": "做了拼豆图纸！\n因为最近迷上了拼豆\n所以按susu表情包做了个图纸\n但是这个手还是有点奇怪。。。\n看情况以后再修修 或者搞个大点的画布会好点吧",
+          "link": "https://www.bilibili.com/opus/1222996408609538056?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_16_15.jpg",
+            "assets/images/dynamics/07_16_16.png"
+          ]
+        }
+      },
+      {
+        "time": "12:19",
+        "content": "喵呜！！好像从画里听到了风铃的声音",
+        "link": "https://t.bilibili.com/1225513688939626502?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "秞荼yo",
+          "content": "猫猫嘴好萌www\n\n\n\n\n\n不是我画的是约稿，画师@bili_84722739707 ​",
+          "link": "https://www.bilibili.com/opus/1222987767154212872?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_16_17.jpg"
+          ]
+        }
+      },
+      {
+        "time": "12:18",
+        "content": "三个都好可爱！！！！！！！！！！",
+        "link": "https://t.bilibili.com/1225513538669248513?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "炘屿Neuer",
+          "content": "你们三个中有三个很可爱～\n拼了豆豆眼酥酥!",
+          "link": "https://www.bilibili.com/opus/1221831428808900614?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_16_18.jpg"
+          ]
+        }
+      },
+      {
+        "time": "12:17",
+        "content": "太辛苦了，超级感谢\n酥酥也会好好用起来的！！！",
+        "link": "https://t.bilibili.com/1225513242308116497?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "Jasperひろし",
+          "content": "二周年给酥酥做了个网站！\n首先祝酥酥和老曹二周年快乐！感谢酥酥和兵马酥同担们的陪伴，这一年来从大家身上获得了许多快乐和感动！\n  为了记录酥酥和大家的点点滴滴，同时可以更好地检索动态、二创、歌曲，以及了解各个月的直播情况，这次试做了一个非官方粉丝向网站的demo：global.diansuki.cn（全球部署加载可能有些慢，后续等备案通过会再上线，方便国内访问）\n  为什么是demo呢？先容我滑跪道歉一下——一个是这个主意想到的有点晚，另一个是数据录入比较麻烦工作量也比较大（阿B的话题和动态的检索功能比较emm）（绝对不是我看世界杯看昏头了）。所以目前只处理了2月-目前的动态，专栏，直播（后续打算给直播做分类）。二创是选取了热门推荐的，歌曲也是同理加入了20首。接下来会慢慢补全！（月底要去韩国一趟，下个月开始找个稳定的空余时间加入日常生活里来做）\n  在这里还想向各位bms寻求下帮助！①目前小组件打算先做一个酥按钮，点击后发出些酥酥说的一些话或者怪叫；②想收录些粉丝写的同人文（？）到网站里，希望大家可以来投稿（不过会审核下）；③如果大家有很想录入的歌，或者有精确演唱时间、出处可以来告诉我，会优先录入；④各位如果有其他的网站建设建议也可以提出。联系邮箱：kousakahiroshi@sina.com\n  此外，因为图片没做模糊处理，建议在wifi环境下浏览；同时，作为与酥酥和各位同担们一同建设的网站，每个作品和二创都加上了出处链接（视频类型是点击封面进入站内播放），希望各位能动动手指点赞、收藏。至于头像和表情，没有加入的原因是由于很多是B站付费所得，不想引起纠纷。\n  最后再次感谢酥酥和同担们，让我们相互扶持，一起前进！ \n  网站：global.diansuki.cn\n  联系邮箱：kousakahiroshi@sina.com",
+          "link": "https://www.bilibili.com/opus/1224486070801924136?spm_id_from=333.1368.0.0",
+          "images": [
+            "assets/images/dynamics/07_16_19.png",
+            "assets/images/dynamics/07_16_20.png",
+            "assets/images/dynamics/07_16_21.png",
+            "assets/images/dynamics/07_16_22.png",
+            "assets/images/dynamics/07_16_23.png",
+            "assets/images/dynamics/07_16_24.png"
+          ]
+        }
+      },
+      {
+        "time": "12:15",
+        "content": "虫电宝上的贴纸和走路草的桂花枝都好有小巧思！巨可爱！！\n好！！接下来要更加有精神把电量带给大家！！！！",
+        "link": "https://t.bilibili.com/1225512881530863687?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "子流缠流子",
+          "content": "酥师傅两周年吃我超极巨幸福圆满！\n\n今年对酥师傅的印象是能量很足的虫电宝和很能走路的走路草！  感觉会很可爱就画了。",
+          "link": "https://www.bilibili.com/opus/1224927486042701832?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_16_25.jpg"
+          ]
+        }
+      },
+      {
+        "time": "12:10",
+        "content": "哇超可爱！摆放好有品味！！",
+        "link": "https://t.bilibili.com/1225511618815721488?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "被子今天也想打桌游",
+          "content": "#可爱小女孩 #痛包 #宝宝辅食()\n可爱小女孩的痛包 可爱 嘿嘿",
+          "link": "https://www.bilibili.com/opus/1224256994448244741?spm_id_from=333.1387.0.0",
+          "images": [
+            "assets/images/dynamics/07_16_26.jpg"
+          ]
+        }
+      },
+      {
+        "time": "12:10",
+        "content": "这两天看到大家精心准备的祝福感觉到真的很不可思议，热爱的心原来能够有这么大的力量\n酥酥和兵马酥的故事在两年前的今天正式开始，两年以来我们一起经历了很多，一起改变和成长了很多\n谢谢每一位愿意和我分享人生的同伴",
+        "link": "https://t.bilibili.com/1225511373957496857?spm_id_from=333.1387.0.0",
+        "repost": {
+          "id": "漓梦い清玥",
+          "title": "【点酥Susu】☯出道二周年快乐☯「兵马酥祝语合集」",
+          "link": "https://www.bilibili.com/video/BV1amNn6bEa7/?spm_id_from=333.1387.list.card_archive.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+          "type": "video",
+          "cover": "assets/images/dynamics/07_16_27.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-14",
+    "dynamics": [
+      {
+        "time": "01:01",
+        "content": "风吹一夏就好了，不要台风吹一夏",
+        "link": "https://t.bilibili.com/1224596868083744771?spm_id_from=333.1387.0.0",
+        "repost": {
+          "title": "风吹一夏就好了，不要台风吹一夏",
+          "link": "https://www.bilibili.com/video/BV1xDNU6cEwn/?spm_id_from=333.1368.list.card_archive.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+          "type": "post_video",
+          "cover": "assets/images/dynamics/07_16_28.jpg"
+        }
+      }
+    ]
+  },
+  {
     "date": "2026-07-12",
     "dynamics": [
       {

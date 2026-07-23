@@ -6,11 +6,69 @@
 
   var calGrid = document.getElementById("cal-grid");
   var filterTitle = document.getElementById("filter-title");
+  var filterTopic = document.getElementById("filter-topic");
+  var filterCategory = document.getElementById("filter-category");
   var datePickerBtn = document.getElementById("date-picker-btn");
   var datePickerDrop = document.getElementById("date-picker-drop");
 
   var WEEKDAYS = ["日", "一", "二", "三", "四", "五", "六"];
   var cellStreamIdx = {};
+
+  /* 选题与分类映射 */
+  var TOPIC_MAP = {
+    "杂谈": ["早台", "古文", "粉丝投稿", "晚台", "视听", "专题", "竖屏", "工作", "午台"],
+    "游戏": ["悬恐解", "3A", "AVG", "休闲", "体感", "模拟经营", "网游", "棋牌", "音游"],
+    "音声": ["日常", "专题"],
+    "联动": ["游戏", "杂谈"]
+  };
+
+  function populateTopicSelect() {
+    if (!filterTopic) return;
+    filterTopic.innerHTML = "<option value=\"\">全部选题</option>";
+    Object.keys(TOPIC_MAP).forEach(function (t) {
+      var opt = document.createElement("option");
+      opt.value = t; opt.textContent = t;
+      if (t === filterTopic.value) opt.selected = true;
+      filterTopic.appendChild(opt);
+    });
+  }
+
+  function populateCategorySelect(topic) {
+    if (!filterCategory) return;
+    filterCategory.innerHTML = "<option value=\"\">全部分类</option>";
+    var cats = TOPIC_MAP[topic] || [];
+    cats.forEach(function (c) {
+      var opt = document.createElement("option");
+      opt.value = c; opt.textContent = c;
+      if (c === filterCategory.value) opt.selected = true;
+      filterCategory.appendChild(opt);
+    });
+    /* 如果当前分类不在新选题的子集中，重置 */
+    if (topic && cats.indexOf(filterCategory.value) === -1) {
+      filterCategory.value = "";
+    }
+  }
+
+  function streamMatches(stream, topic, category, keyword) {
+    if (topic && stream.topic !== topic) return false;
+    if (category && stream.category !== category) return false;
+    if (keyword && stream.title.toLowerCase().indexOf(keyword) === -1) return false;
+    return true;
+  }
+
+  populateTopicSelect();
+  populateCategorySelect("");
+
+  if (filterTopic) {
+    filterTopic.addEventListener("change", function () {
+      populateCategorySelect(filterTopic.value);
+      render();
+    });
+  }
+
+  if (filterCategory) {
+    filterCategory.addEventListener("change", function () { render(); });
+  }
 
   function buildStreamMap() {
     var map = {};
@@ -57,7 +115,7 @@
     return months;
   }
 
-  function monthHasMatch(month, streamMap, keyword) {
+  function monthHasMatch(month, streamMap, topic, category, keyword) {
     for (var w = 0; w < month.weeks.length; w++) {
       var week = month.weeks[w];
       for (var d = 0; d < week.length; d++) {
@@ -65,19 +123,18 @@
         if (!ds) continue;
         var streams = streamMap[ds];
         if (!streams) continue;
-        if (!keyword) return true;
         for (var s = 0; s < streams.length; s++) {
-          if (streams[s].title.toLowerCase().indexOf(keyword) !== -1) return true;
+          if (streamMatches(streams[s], topic, category, keyword)) return true;
         }
       }
     }
     return false;
   }
 
-  function getFilteredMonths(streamMap, keyword) {
+  function getFilteredMonths(streamMap, topic, category, keyword) {
     var months = generateMonths();
-    if (!keyword) return months;
-    return months.filter(function (m) { return monthHasMatch(m, streamMap, keyword); });
+    if (!topic && !category && !keyword) return months;
+    return months.filter(function (m) { return monthHasMatch(m, streamMap, topic, category, keyword); });
   }
 
   /* ---- 渲染 ---- */
@@ -86,7 +143,9 @@
 
     var streamMap = buildStreamMap();
     var keyword = filterTitle ? filterTitle.value.trim().toLowerCase() : "";
-    var months = getFilteredMonths(streamMap, keyword);
+    var topic = filterTopic ? filterTopic.value : "";
+    var category = filterCategory ? filterCategory.value : "";
+    var months = getFilteredMonths(streamMap, topic, category, keyword);
 
     var html = "";
     html += "<div class=\"cal-weekdays\">";
@@ -114,9 +173,18 @@
             filteredStreams = streams.filter(function (s) { return s.title.toLowerCase().indexOf(keyword) !== -1; });
           }
 
-          if (filteredStreams && filteredStreams.length > 0) {
+          if (streams && streams.length > 0) {
+            var filteredStreams = streams.filter(function (s) { return streamMatches(s, topic, category, keyword); });
+            if (filteredStreams.length === 0) {
+              html += "<div class=\"cal-day\">";
+              html += "<span class=\"cal-day__date\">" + dateStr + "</span>";
+              html += "</div>";
+              return;
+            }
             /* 按时间排序 */
-            var sorted = filteredStreams.slice().sort(function (a, b) { return a.time.localeCompare(b.time); });
+            var sorted = filteredStreams.slice().sort(function (a, b) {
+              return (a.time || "").padStart(5, "0").localeCompare((b.time || "").padStart(5, "0"));
+            });
             var key = dateStr;
             if (!(key in cellStreamIdx)) cellStreamIdx[key] = 0;
             if (cellStreamIdx[key] >= sorted.length) cellStreamIdx[key] = 0;
@@ -125,6 +193,15 @@
             var coverStyle = cur.cover ? "background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(" + cur.cover + ");background-size:cover;background-position:center;" : "";
 
             html += "<div class=\"cal-day cal-day--stream\" style=\"" + coverStyle + "\" data-date=\"" + dateStr + "\">";
+            if (cur.topic && !(topic && category)) {
+              html += "<span class=\"cal-day__badge\">";
+              if (!topic) {
+                html += "<span class=\"cal-day__badge-topic cal-day__badge-topic--" + escapeHTML(cur.topic) + "\">" + escapeHTML(cur.topic) + "</span>";
+              } else {
+                html += "<span class=\"cal-day__badge-category cal-day__badge-category--" + escapeHTML(cur.topic) + "\">" + (cur.category || "") + "</span>";
+              }
+              html += "</span>";
+            }
             html += "<span class=\"cal-day__date\">" + dateStr + "</span>";
             html += "<span class=\"cal-day__time\">" + escapeHTML(cur.time) + "</span>";
             html += "<span class=\"cal-day__title\">" + escapeHTML(cur.title) + "</span>";
@@ -165,10 +242,10 @@
         var dir = btn.getAttribute("data-dir");
         var streams = streamMap[ds];
         if (!streams) return;
-        if (keyword) {
-          streams = streams.filter(function (s) { return s.title.toLowerCase().indexOf(keyword) !== -1; });
-        }
-        streams.sort(function (a, b) { return a.time.localeCompare(b.time); });
+        streams = streams.filter(function (s) { return streamMatches(s, topic, category, keyword); });
+        streams.sort(function (a, b) {
+          return (a.time || "").padStart(5, "0").localeCompare((b.time || "").padStart(5, "0"));
+        });
         if (dir === "up") cellStreamIdx[ds] = (cellStreamIdx[ds] - 1 + streams.length) % streams.length;
         else cellStreamIdx[ds] = (cellStreamIdx[ds] + 1) % streams.length;
         render();
