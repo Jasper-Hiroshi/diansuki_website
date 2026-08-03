@@ -503,7 +503,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   .cal-day__play { position: static; transform: none; width: 20px; height: 20px; font-size: 0.5rem; right: auto; top: auto; }
 }
 
-.site-footer { display: flex; justify-content: center; align-items: center; gap: 2rem; padding: 0.8rem 1rem 1.2rem; flex-wrap: wrap; }
+.site-footer { display: flex; justify-content: center; align-items: center; gap: 0.5em; padding: 0.8rem 1rem 1.2rem; flex-wrap: wrap; }
+.site-footer a { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.75rem; color: var(--color-text-muted); text-decoration: none; }
+.site-footer a:hover { color: var(--color-ink); }
+.site-footer img { width: 16px; height: 16px; flex-shrink: 0; }
 .site-footer a { display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.75rem; color: var(--color-text-muted); text-decoration: none; }
 .site-footer a:hover { color: var(--color-ink); }
 .site-footer img { width: 16px; height: 16px; flex-shrink: 0; }
