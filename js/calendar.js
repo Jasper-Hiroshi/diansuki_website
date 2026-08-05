@@ -107,7 +107,7 @@
     var endYear = today.getFullYear(), endMonth = today.getMonth();
     var months = [];
     var y = endYear, m = endMonth;
-    while (y > 2024 || (y === 2024 && m >= 5)) {
+    while (y > 2024 || (y === 2024 && m >= 6)) {
       months.push({ year: y, month: m, label: y + "年" + (m + 1) + "月", weeks: getMonthWeeks(y, m) });
       m--;
       if (m < 0) { m = 11; y--; }
@@ -288,7 +288,7 @@
     var html = "";
     html += "<div class=\"dyn-cal-hdr\">";
     html += "<button class=\"dyn-cal-hdr__nav\" type=\"button\" data-nav=\"prev\">&lt;</button>";
-    html += "<span class=\"dyn-cal-hdr__label\">" + pickerYear + "年" + (pickerMonth + 1) + "月</span>";
+    html += "<div class=\"dyn-cal-hdr__label\"><input class=\"dyn-cal-hdr__year\" type=\"text\" value=\"" + pickerYear + "\" maxlength=\"4\" inputmode=\"numeric\" aria-label=\"年份\"><span>年</span><input class=\"dyn-cal-hdr__month\" type=\"text\" value=\"" + (pickerMonth + 1) + "\" maxlength=\"2\" inputmode=\"numeric\" aria-label=\"月份\"><span>月</span></div>";
     html += "<button class=\"dyn-cal-hdr__nav\" type=\"button\" data-nav=\"next\">&gt;</button>";
     html += "</div>";
     html += "<div class=\"dyn-cal-wdays\">";
@@ -325,6 +325,27 @@
         setTimeout(function () { document.addEventListener("click", closeOnOutside, { once: true }); }, 0);
       });
     });
+
+    /* year/month input */
+    (function () {
+      var yearEl = datePickerDrop.querySelector(".dyn-cal-hdr__year");
+      var monthEl = datePickerDrop.querySelector(".dyn-cal-hdr__month");
+      if (!yearEl || !monthEl) return;
+      function apply() {
+        var ny = parseInt(yearEl.value, 10);
+        var nm = parseInt(monthEl.value, 10);
+        var ch = false;
+        if (!isNaN(ny) && ny >= 2024) { pickerYear = ny; ch = true; } else { yearEl.value = pickerYear; }
+        if (!isNaN(nm) && nm >= 1 && nm <= 12) { pickerMonth = nm - 1; ch = true; } else { monthEl.value = pickerMonth + 1; }
+        if (ch) { renderDatePicker(activeSet); setTimeout(function () { document.addEventListener("click", closeOnOutside, { once: true }); }, 0); }
+      }
+      yearEl.addEventListener("blur", apply);
+      monthEl.addEventListener("blur", apply);
+      yearEl.addEventListener("keydown", function (e) { if (e.key === "Enter") apply(); });
+      monthEl.addEventListener("keydown", function (e) { if (e.key === "Enter") apply(); });
+      yearEl.addEventListener("focus", function () { yearEl.select(); });
+      monthEl.addEventListener("focus", function () { monthEl.select(); });
+    })();
 
     datePickerDrop.querySelectorAll(".dyn-cal-cell--active").forEach(function (btn) {
       btn.addEventListener("click", function () {

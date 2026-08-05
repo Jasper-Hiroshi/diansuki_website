@@ -179,7 +179,7 @@
     var html = "";
     html += "<div class=\"dyn-cal-hdr\">";
     html += "<button class=\"dyn-cal-hdr__nav\" type=\"button\" data-nav=\"prev\">&lt;</button>";
-    html += "<span class=\"dyn-cal-hdr__label\">" + y + "年" + (m + 1) + "月</span>";
+    html += "<div class=\"dyn-cal-hdr__label\"><input class=\"dyn-cal-hdr__year\" type=\"text\" value=\"" + y + "\" maxlength=\"4\" inputmode=\"numeric\" aria-label=\"年份\"><span>年</span><input class=\"dyn-cal-hdr__month\" type=\"text\" value=\"" + (m + 1) + "\" maxlength=\"2\" inputmode=\"numeric\" aria-label=\"月份\"><span>月</span></div>";
     html += "<button class=\"dyn-cal-hdr__nav\" type=\"button\" data-nav=\"next\">&gt;</button>";
     html += "</div>";
 
@@ -230,6 +230,27 @@
         }, 0);
       });
     });
+
+    /* year/month input */
+    (function () {
+      var yearEl = drop.querySelector(".dyn-cal-hdr__year");
+      var monthEl = drop.querySelector(".dyn-cal-hdr__month");
+      if (!yearEl || !monthEl) return;
+      function apply() {
+        var ny = parseInt(yearEl.value, 10);
+        var nm = parseInt(monthEl.value, 10);
+        var ch = false;
+        if (!isNaN(ny) && ny >= 2024) { pickerState[side].year = ny; ch = true; } else { yearEl.value = pickerState[side].year; }
+        if (!isNaN(nm) && nm >= 1 && nm <= 12) { pickerState[side].month = nm - 1; ch = true; } else { monthEl.value = pickerState[side].month + 1; }
+        if (ch) { renderCalendar(side); setTimeout(function () { document.addEventListener("click", closeOnOutside, { once: true }); }, 0); }
+      }
+      yearEl.addEventListener("blur", apply);
+      monthEl.addEventListener("blur", apply);
+      yearEl.addEventListener("keydown", function (e) { if (e.key === "Enter") apply(); });
+      monthEl.addEventListener("keydown", function (e) { if (e.key === "Enter") apply(); });
+      yearEl.addEventListener("focus", function () { yearEl.select(); });
+      monthEl.addEventListener("focus", function () { monthEl.select(); });
+    })();
 
     /* date clicks */
     drop.querySelectorAll(".dyn-cal-cell--active").forEach(function (cell) {
