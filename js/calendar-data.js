@@ -1349,6 +1349,346 @@ var calendarData = {
         ]
       },
       {
+        "date": "2025-04-05",
+        "streams": [
+          {
+            "time": "11:00",
+            "title": "酥师傅货运",
+            "link": "https://www.bilibili.com/video/BV1EkRXY4EAm/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "休闲",
+            "cover": "assets/images/stream/ouka.jpg"
+          },
+          {
+            "time": "20:00",
+            "title": "复健！音乐修行中",
+            "link": "https://www.bilibili.com/video/BV132RZYFENB/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "音声",
+            "category": "日常",
+            "cover": "assets/images/stream/lianhua.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-04-04",
+        "streams": [
+          {
+            "time": "21:00",
+            "title": "夜间飙车闲聊",
+            "link": "https://www.bilibili.com/video/BV1gbZoYYEQ9/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "晚台",
+            "cover": "assets/images/stream/wsqt.jpg"
+          },
+          {
+            "time": "23:00",
+            "title": "欧洲小霸王深夜跑货中",
+            "link": "https://www.bilibili.com/video/BV1FGRSYnEuB/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "休闲",
+            "cover": "assets/images/stream/ouka.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-04-03",
+        "streams": [
+          {
+            "time": "11:00",
+            "title": "百日筑基 第柒拾玖天",
+            "link": "https://www.bilibili.com/video/BV1JDZ1YUEUZ/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/lianhua.jpg"
+          },
+          {
+            "time": "20:00",
+            "title": "你就是蒙面好汉邪剑仙？请赐教！",
+            "link": "https://www.bilibili.com/video/BV12MZQYrEwW/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "视听",
+            "cover": "assets/images/stream/c8.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-04-02",
+        "streams": [
+          {
+            "time": "20:00",
+            "title": "兜风和摊饼和聊天",
+            "link": "https://www.bilibili.com/video/BV17jfMY3E6p/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "晚台",
+            "cover": "assets/images/stream/lianhua.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-04-01",
+        "streams": [
+          {
+            "time": "21:00",
+            "title": "今晚这个直播间是我的了",
+            "link": "https://www.bilibili.com/video/BV1TnfFYiERn/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "专题",
+            "cover": "assets/images/stream/daiban.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-31",
+        "streams": [
+          {
+            "time": "17:00",
+            "title": "小术士和夜之少女的【双影奇境】5",
+            "link": "https://www.bilibili.com/video/BV1UMZHYFE2b/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "联动",
+            "category": "游戏",
+            "cover": "assets/images/stream/syqj.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-30",
+        "streams": [
+          {
+            "time": "11:00",
+            "title": "你怎么知道我早上吃了两大块炸鸡排",
+            "link": "https://www.bilibili.com/video/BV1PMZBYNEuX/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/lianhua.jpg"
+          },
+          {
+            "time": "20:00",
+            "title": "【恐鬼症和闺中夜话】老老少少的探灵小队",
+            "link": "https://www.bilibili.com/video/BV1KTZ6YCEgz/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "联动",
+            "category": "游戏",
+            "cover": "assets/images/stream/phasmophobia.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-29",
+        "streams": [
+          {
+            "time": "20:00",
+            "title": "音乐修行中",
+            "link": "https://www.bilibili.com/video/BV1vRZaYBEoF/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "音声",
+            "category": "日常",
+            "cover": "assets/images/stream/lianhua.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-28",
+        "streams": [
+          {
+            "time": "11:00",
+            "title": "百日筑基 第柒拾捌天",
+            "link": "https://www.bilibili.com/video/BV1KBoDYuE1y/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/wsqt.jpg"
+          },
+          {
+            "time": "22:00",
+            "title": "新手司机开夜车",
+            "link": "https://www.bilibili.com/video/BV1DFooYbE6t/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "休闲",
+            "cover": "assets/images/stream/ouka.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-27",
+        "streams": [
+          {
+            "time": "11:00",
+            "title": "复健的快乐唱歌！",
+            "link": "https://www.bilibili.com/video/BV1TGZgYZE4v/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "音声",
+            "category": "日常",
+            "cover": "assets/images/stream/wsqt.jpg"
+          },
+          {
+            "time": "20:00",
+            "title": "好多人一起捡垃圾的R.E.P.O",
+            "link": "https://www.bilibili.com/video/BV1xyZLY3E9v/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "联动",
+            "category": "游戏",
+            "cover": "assets/images/stream/repo.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-26",
+        "streams": [
+          {
+            "time": "18:00",
+            "title": "小术士和夜之少女的【双影奇境】4",
+            "link": "https://www.bilibili.com/video/BV1NTZKY1Eoe/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "联动",
+            "category": "游戏",
+            "cover": "assets/images/stream/syqj.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-25",
+        "streams": [
+          {
+            "time": "21:00",
+            "title": "夜读聊斋",
+            "link": "https://www.bilibili.com/video/BV1kSo8YgEHi/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "古文",
+            "cover": "assets/images/stream/xxz.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-24",
+        "streams": [
+          {
+            "time": "18:00",
+            "title": "清谈 - 出去玩回来啦！",
+            "link": "https://www.bilibili.com/video/BV1azo1YAEGh/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "晚台",
+            "cover": "assets/images/stream/wsqt.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-22",
+        "streams": [
+          {
+            "time": "13:00",
+            "title": "一天不见了！打电话吗！",
+            "link": "https://www.bilibili.com/video/BV1uMXpYHERk/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "竖屏",
+            "cover": "assets/images/stream/wsqt.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-20",
+        "streams": [
+          {
+            "time": "10:00",
+            "title": "百日筑基第柒拾柒天",
+            "link": "https://www.bilibili.com/video/BV1ptXPYREFJ/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/wsqt.jpg"
+          },
+          {
+            "time": "17:00",
+            "title": "小术士和夜之少女的【双影奇境】3",
+            "link": "https://www.bilibili.com/video/BV131XeYREtd/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "联动",
+            "category": "游戏",
+            "cover": "assets/images/stream/syqj.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-19",
+        "streams": [
+          {
+            "time": "20:00",
+            "title": "音乐修行",
+            "link": "https://www.bilibili.com/video/BV1U8XcYdECL/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "音声",
+            "category": "日常",
+            "cover": "assets/images/stream/wsqt.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-18",
+        "streams": [
+          {
+            "time": "18:00",
+            "title": "小术士和夜之少女的【双影奇境】2",
+            "link": "https://www.bilibili.com/video/BV1gZX7YkELJ/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "联动",
+            "category": "游戏",
+            "cover": "assets/images/stream/syqj.jpg"
+          },
+          {
+            "time": "22:00",
+            "title": "【竖屏】夜间清谈",
+            "link": "https://www.bilibili.com/video/BV1ahXjY3Eyp/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "晚台",
+            "cover": "assets/images/stream/wsqt.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-17",
+        "streams": [
+          {
+            "time": "11:00",
+            "title": "【竖屏】清谈一会儿",
+            "link": "https://www.bilibili.com/video/BV1YLQiYFEDe/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "早台",
+            "cover": "assets/images/stream/wsqt.jpg"
+          },
+          {
+            "time": "20:00",
+            "title": "一口气看十集加布",
+            "link": "https://www.bilibili.com/video/BV1KgXuYkEy3/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "视听",
+            "cover": "assets/images/stream/kabu.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-16",
+        "streams": [
+          {
+            "time": "15:00",
+            "title": "今天你一定要嫁给我！",
+            "link": "https://www.bilibili.com/video/BV1zQQbYHEZN/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "游戏",
+            "category": "模拟经营",
+            "cover": "assets/images/stream/zgsxq.jpg"
+          },
+          {
+            "time": "22:00",
+            "title": "【观众来稿】表情包分享大会",
+            "link": "https://www.bilibili.com/video/BV112QYY3EoW/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "杂谈",
+            "category": "粉丝投稿",
+            "cover": "assets/images/stream/fxbqb.jpg"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-15",
+        "streams": [
+          {
+            "time": "20:00",
+            "title": "音乐修行",
+            "link": "https://www.bilibili.com/video/BV1EXQSYGEAQ/?spm_id_from=333.1387.collection.video_card.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+            "topic": "音声",
+            "category": "日常",
+            "cover": "assets/images/stream/wsqt.jpg"
+          }
+        ]
+      },
+      {
         "date": "2024-10-22",
         "streams": [
           {
@@ -3164,6 +3504,6 @@ var calendarData = {
             "cover": "assets/images/stream/07_16_1.jpg"
           }
         ]
-      }
+      },
     ]
 };
