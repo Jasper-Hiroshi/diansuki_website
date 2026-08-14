@@ -427,17 +427,17 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .cal-day__actions .cal-day__play { position: static; transform: none; }
 
 /* --- FAB --- */
-.fab { position: fixed; right: 24px; bottom: 24px; z-index: 999; }
-.fab__overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 998; opacity: 0; pointer-events: none; transition: opacity 0.35s; }
+.fab { position: fixed; right: 24px; bottom: 24px; z-index: 1700; }
+.fab__overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 1698; opacity: 0; pointer-events: none; transition: opacity 0.35s; }
 .fab__overlay--show { opacity: 1; pointer-events: auto; }
-.fab__ball { position: relative; z-index: 1000; width: 52px; height: 52px; background: var(--color-primary); border: 3px solid #000; box-shadow: 4px 4px 0px #000; cursor: grab; display: flex; align-items: center; justify-content: center; touch-action: none; user-select: none; transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1); }
+.fab__ball { position: relative; z-index: 1700; width: 52px; height: 52px; background: var(--color-primary); border: 3px solid #000; box-shadow: 4px 4px 0px #000; cursor: grab; display: flex; align-items: center; justify-content: center; touch-action: none; user-select: none; transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1); }
 .fab__ball:active { cursor: grabbing; }
 .fab__ball--dragging { transition: none !important; }
 .fab--open .fab__ball--dragging { transition: none !important; }
 .fab--open .fab__ball { position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 72px; height: 72px; }
 .fab__ball-img { width: 42px; height: 42px; background: var(--color-primary-soft); border: 2px solid #000; object-fit: cover; transition: all 0.4s; }
 .fab--open .fab__ball-img { width: 56px; height: 56px; }
-.fab__menu { position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); pointer-events: none; z-index: 1001; }
+.fab__menu { position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); pointer-events: none; z-index: 1701; }
 .fab__item { position: absolute; left: 50%; top: 50%; width: 0; height: 0; background: #fff; border: 3px solid #000; box-shadow: 4px 4px 0px #000; display: flex; align-items: center; justify-content: center; font-size: 0; font-weight: 700; color: #000; cursor: pointer; pointer-events: none; opacity: 0; transform: translate(-50%,-50%) scale(0.3); transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1); white-space: nowrap; }
 .fab--open .fab__item { width: 64px; height: 64px; font-size: 0.85rem; pointer-events: auto; opacity: 1; transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty))) scale(1); }
 .fab--open .fab__item:hover { background: var(--color-primary); }
@@ -1727,6 +1727,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .calendar-page .cal-day__time,
 .calendar-page .cal-day__title,
 .calendar-page .cal-day__actions { position: relative; z-index: 1; }
+.calendar-page .cal-day__content { display: contents; }
 .calendar-page .cal-day--stream .cal-day__date { margin-right: 56px; color: #ffea38; font-size: 0.79rem; text-shadow: 0 1px 3px #000,0 0 7px rgba(0,0,0,0.7); }
 .calendar-page .cal-day__time { margin-top: 5px; color: #ffea38; font-size: 0.88rem; font-weight: 900; line-height: 1.25; text-shadow: 0 1px 3px #000,0 0 7px rgba(0,0,0,0.7); }
 .calendar-page .cal-day__title { margin-top: 5px; padding: 0; color: rgba(255,255,255,0.96); font-size: clamp(0.82rem,0.9vw,0.94rem); font-weight: 800; line-height: 1.38; -webkit-line-clamp: 3; text-shadow: 0 2px 3px #000,0 0 8px rgba(0,0,0,0.82); }
@@ -1738,7 +1739,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .calendar-page .cal-day__actions { position: absolute; right: 7px; top: auto; bottom: 7px; transform: none; gap: 5px; }
 .calendar-page .cal-day__switch { width: 28px; height: 20px; padding: 0; color: #fff; background: transparent; border: 0; border-radius: 0; font-size: 0.76rem; font-weight: 900; text-shadow: 0 2px 3px #000; }
 .calendar-page .cal-day__switch:hover { color: var(--cal-yellow); opacity: 1; transform: scale(1.12); }
-.calendar-page .cal-day__play { width: 28px; height: 28px; color: var(--cal-ink); background: var(--cal-yellow); border: 2px solid var(--cal-ink); border-radius: 50%; font-size: 0.7rem; }
+.calendar-page .cal-day__play { z-index: 2; width: 28px; height: 28px; color: var(--cal-ink); background: var(--cal-yellow); border: 2px solid var(--cal-ink); border-radius: 50%; font-size: 0.7rem; pointer-events: auto; touch-action: manipulation; }
 
 /* Collections: denser cards with clearer type and expand controls. */
 .calendar-page #cal-tab-collections { background: linear-gradient(145deg,rgba(255,230,0,0.16),rgba(255,255,255,0.94) 38%); }
@@ -1825,16 +1826,27 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
   .calendar-page .cal-card .dyn-filters__input { width: 100%; }
   .calendar-page .cal-grid { overflow: visible; padding-right: 0; }
   .calendar-page .cal-weekdays { display: none; }
-  .calendar-page .cal-month__grid { gap: 6px; }
-  .calendar-page .cal-day { display: flex; height: auto; min-height: 48px; padding: 0.65rem 0.7rem; border-radius: 3px 10px 3px 10px; }
-  .calendar-page .cal-day--empty { display: none; }
-  .calendar-page .cal-day--stream { min-height: 108px; padding: 0.7rem 3rem 0.75rem 0.8rem; }
-  .calendar-page .cal-day__date { margin-right: 62px; font-size: 0.76rem; }
-  .calendar-page .cal-day__time { font-size: 0.86rem; }
-  .calendar-page .cal-day__title { font-size: 0.9rem; line-height: 1.45; }
-  .calendar-page .cal-day__title--long { font-size: 0.82rem; line-height: 1.35; -webkit-line-clamp: 4; }
-  .calendar-page .cal-day__title--xlong { font-size: 0.74rem; line-height: 1.28; -webkit-line-clamp: 5; }
-  .calendar-page .cal-day__actions { right: 8px; bottom: 8px; }
+  .calendar-page .cal-month__label { margin: 1.1rem 0 0.65rem; font-size: 1.15rem; }
+  .calendar-page .cal-month__grid { grid-template-columns: minmax(0,1fr); gap: 0.75rem; }
+  .calendar-page .cal-day { display: none; }
+  .calendar-page .cal-day--stream { display: flex; min-height: 190px; padding: 0.9rem 1rem 4.4rem; border-width: 2px; border-radius: 4px 15px 4px 15px; box-shadow: 4px 4px 0 rgba(21,21,21,0.88); overflow: hidden; }
+  .calendar-page .cal-day--stream::before { background: linear-gradient(105deg,rgba(5,5,5,0.78) 0%,rgba(5,5,5,0.58) 68%,rgba(5,5,5,0.42) 100%); }
+  .calendar-page .cal-day__content { position: relative; z-index: 2; display: flex; flex: 1; flex-direction: column; align-items: center; justify-content: center; width: 100%; min-width: 0; text-align: center; }
+  .calendar-page .cal-day--stream .cal-day__date { margin-right: 0; font-size: 0.84rem; line-height: 1.4; }
+  .calendar-page .cal-day__time { margin-top: 0.3rem; font-size: 1.04rem; line-height: 1.35; }
+  .calendar-page .cal-day__title { width: min(100%,430px); max-width: 100%; margin-top: 0.45rem; font-size: 1rem; line-height: 1.45; text-align: center; -webkit-line-clamp: 2; }
+  .calendar-page .cal-day__title--long { font-size: 0.92rem; line-height: 1.4; -webkit-line-clamp: 3; }
+  .calendar-page .cal-day__title--xlong { font-size: 0.84rem; line-height: 1.35; -webkit-line-clamp: 3; }
+  .calendar-page .cal-day__badge { top: 0.8rem; right: 0.8rem; max-width: 82px; }
+  .calendar-page .cal-day__badge-topic,
+  .calendar-page .cal-day__badge-category { padding: 0.25rem 0.5rem; font-size: 0.72rem; }
+  .calendar-page .cal-day__actions { z-index: 3; right: 0; left: 0; bottom: 0.75rem; top: auto; display: grid; grid-template-columns: 42px 44px 42px; align-items: center; justify-items: center; gap: 0.45rem; width: 146px; margin-right: auto; margin-left: auto; transform: none; }
+  .calendar-page .cal-day__switch { width: 42px; height: 42px; color: var(--cal-yellow); background: rgba(21,21,21,0.78); border: 2px solid rgba(255,255,255,0.7); border-radius: 3px 10px 3px 10px; font-size: 0.78rem; text-shadow: none; touch-action: manipulation; }
+  .calendar-page .cal-day__play,
+  .calendar-page .cal-day__actions .cal-day__play { z-index: 3; right: 0; left: 0; top: auto; bottom: 0.75rem; width: 44px; height: 44px; margin-right: auto; margin-left: auto; border-width: 2px; font-size: 0.88rem; transform: none; box-shadow: 3px 3px 0 rgba(0,0,0,0.72); }
+  .calendar-page .cal-day__actions .cal-day__switch--up { grid-column: 1; }
+  .calendar-page .cal-day__actions .cal-day__play { position: static; grid-column: 2; transform: none; }
+  .calendar-page .cal-day__actions .cal-day__switch--dn { grid-column: 3; }
   .calendar-page .col-grid { grid-template-columns: 1fr; gap: 1rem; }
   .calendar-page .col-item__bar { min-height: 66px; padding: 0.75rem; }
   .calendar-page .col-item__type { min-width: 46px; padding: 0.3rem 0.5rem; }
@@ -1853,4 +1865,25 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .calendar-page * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* Shared site navigation: identical dimensions and spacing on every page. */
+body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav { position: sticky; z-index: 1400; top: 0; overflow: hidden; background: rgba(21,21,21,0.96); border-bottom: 0; box-shadow: 0 7px 0 #ffe600,0 10px 0 rgba(21,21,21,0.14); backdrop-filter: blur(12px); }
+body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__inner { position: relative; z-index: 1; width: 100%; max-width: 1240px; min-height: 96px; margin: 0 auto; padding: 1.05rem 2rem; gap: clamp(2rem,5vw,5rem); }
+body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__brand { width: auto; padding: 0.55rem 1.35rem 0.65rem; color: #151515; background: #ffe600; border-radius: 2px 20px 2px 20px; box-shadow: 6px 6px 0 #fff; font-size: clamp(1.55rem,2.5vw,2rem); line-height: 1.1; transform: rotate(-2deg) skewX(-5deg); }
+body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__list { align-items: center; gap: 0.55rem 0.8rem; }
+body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__list li { display: flex; }
+body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__link { min-width: 72px; padding: 0.78rem 1.05rem 0.88rem; color: #ffe600; background: transparent; border: 2px solid rgba(255,255,255,0.16); border-radius: 2px 13px 2px 13px; font-size: 1.08rem; line-height: 1; text-align: center; }
+body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__link:hover { color: #ffe600; background: rgba(255,255,255,0.08); border-color: #ffe600; transform: translateY(-3px) rotate(-1deg); }
+body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__link--active,
+body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__link--active:hover { color: #151515; background: #ffe600; border-color: #ffe600; box-shadow: 5px 5px 0 #fff; transform: rotate(-2deg) skewX(-6deg); }
+
+@media (max-width: 768px) {
+  body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__inner { min-height: auto; padding: 0.85rem 0.85rem 1rem; gap: 0.85rem; }
+  body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__brand { width: auto; padding: 0.45rem 1.2rem 0.55rem; font-size: 1.3rem; box-shadow: 4px 4px 0 #fff; }
+  body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0.5rem; width: min(100%,430px); }
+  body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__list li { min-width: 0; }
+  body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__link { width: 100%; min-width: 0; padding: 0.58rem 0.45rem 0.65rem; font-size: 0.88rem; }
+  body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__link--active,
+  body:is(.index-home,.dynamics-page,.widgets-page,.fanworks-page,.columns-page,.songs-page,.calendar-page) .site-nav__link--active:hover { box-shadow: 3px 3px 0 #fff; }
 }

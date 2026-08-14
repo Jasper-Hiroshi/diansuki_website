@@ -255,9 +255,11 @@
               }
               html += "</span>";
             }
+            html += "<span class=\"cal-day__content\">";
             html += "<span class=\"cal-day__date\">" + dateStr + "</span>";
             html += "<span class=\"cal-day__time\">" + escapeHTML(cur.time) + "</span>";
             html += "<span class=\"" + titleClass + "\">" + escapeHTML(cur.title) + "</span>";
+            html += "</span>";
             var hasPrev = cellStreamIdx[key] > 0;
             var hasNext = cellStreamIdx[key] < sorted.length - 1;
             if (hasPrev || hasNext) {
