@@ -34,13 +34,27 @@ def load_data():
     try:
         data = json.loads(array_text)
     except json.JSONDecodeError:
-        import subprocess
-        result = subprocess.run(
-            ["node", "-e", "console.log(JSON.stringify(" + array_text + "))"],
-            capture_output=True, text=True,
-            cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        )
-        data = json.loads(result.stdout)
+        import subprocess, tempfile
+        # 把数组文本写入临时文件，避免 Windows 命令行长度限制
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".js", encoding="utf-8", delete=False
+        ) as tmp:
+            tmp.write(array_text)
+            tmp_path = tmp.name
+        try:
+            result = subprocess.run(
+                ["node", "-e",
+                 "const fs=require('fs');"
+                 "const arr=eval('('+fs.readFileSync('" + tmp_path.replace("\\", "\\\\") + "','utf8')+')');"
+                 "console.log(JSON.stringify(arr));"],
+                capture_output=True, text=True,
+                cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            )
+            if result.returncode != 0:
+                raise RuntimeError(f"Node 解析失败: {result.stderr}")
+            data = json.loads(result.stdout)
+        finally:
+            os.unlink(tmp_path)
     return data
 
 
@@ -121,7 +135,7 @@ def main():
     data = load_data()
     TOPICS = {
         "1": ("杂谈", ["早台", "古文", "粉丝投稿", "晚台", "视听", "专题", "竖屏", "工作", "午台"]),
-        "2": ("游戏", ["悬恐解", "3A", "AVG", "休闲", "体感", "模拟经营", "网游", "棋牌", "音游"]),
+        "2": ("游戏", ["悬恐解", "3A", "AVG", "休闲", "体感", "模拟经营", "网游", "棋牌", "音游", "galgame", "回合制RPG"]),
         "3": ("音声", ["日常", "专题"]),
         "4": ("联动", ["游戏", "杂谈"]),
     }

@@ -10,7 +10,7 @@
     { name: "二创",     href: "fanworks.html" },
     { name: "专栏",     href: "columns.html" },
     { name: "歌",       href: "songs.html" },
-    { name: "直播日历", href: "calendar.html" }
+    { name: "直播", href: "calendar.html" }
   ];
 
   var RADIUS = 100;

@@ -4,6 +4,51 @@
 (function () {
   "use strict";
 
+  /* ---- Tab 切换 ---- */
+  var tabBtns = document.querySelectorAll(".cal-tabs__btn");
+  var tabPanels = {
+    calendar: document.getElementById("cal-tab-calendar"),
+    collections: document.getElementById("cal-tab-collections"),
+    stats: document.getElementById("cal-tab-stats")
+  };
+
+  var TAB_STORAGE_KEY = "diansss.calActiveTab";
+
+  function setActiveTab(tab) {
+    if (!tabPanels[tab]) tab = "calendar";
+    /* 切换按钮激活态 */
+    tabBtns.forEach(function (b) {
+      b.classList.toggle("cal-tabs__btn--active", b.getAttribute("data-tab") === tab);
+    });
+    /* 切换面板 */
+    Object.keys(tabPanels).forEach(function (key) {
+      if (tabPanels[key]) tabPanels[key].style.display = (key === tab) ? "" : "none";
+    });
+    /* 记住当前页，刷新后停留 */
+    try { localStorage.setItem(TAB_STORAGE_KEY, tab); } catch (e) {}
+  }
+
+  tabBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var tab = btn.getAttribute("data-tab");
+      if (tab) setActiveTab(tab);
+    });
+  });
+
+  /* 初始化：恢复上次停留的页
+   * 只在「刷新」(reload) 时恢复上次的 tab；「离开后再返回」(navigate / back_forward) 属于全新进入，回到默认「直播日历」。 */
+  var navType = "navigate";
+  if (performance.getEntriesByType) {
+    var navEntries = performance.getEntriesByType("navigation");
+    if (navEntries && navEntries.length) navType = navEntries[0].type || "navigate";
+  } else if (performance.navigation) {
+    navType = performance.navigation.type === 1 ? "reload" : (performance.navigation.type === 2 ? "back_forward" : "navigate");
+  }
+
+  var savedTab = null;
+  try { savedTab = localStorage.getItem(TAB_STORAGE_KEY); } catch (e) {}
+  setActiveTab(navType === "reload" ? (savedTab || "calendar") : "calendar");
+
   var calGrid = document.getElementById("cal-grid");
   var filterTitle = document.getElementById("filter-title");
   var filterTopic = document.getElementById("filter-topic");
@@ -17,7 +62,7 @@
   /* 选题与分类映射 */
   var TOPIC_MAP = {
     "杂谈": ["早台", "古文", "粉丝投稿", "晚台", "视听", "专题", "竖屏", "工作", "午台"],
-    "游戏": ["悬恐解", "3A", "AVG", "休闲", "体感", "模拟经营", "网游", "棋牌", "音游"],
+    "游戏": ["悬恐解", "3A", "AVG", "休闲", "体感", "模拟经营", "网游", "棋牌", "音游", "galgame", "回合制RPG"],
     "音声": ["日常", "专题"],
     "联动": ["游戏", "杂谈"]
   };
@@ -190,7 +235,15 @@
             if (cellStreamIdx[key] >= sorted.length) cellStreamIdx[key] = 0;
             var cur = sorted[cellStreamIdx[key]];
             var hasMulti = sorted.length > 1;
-            var coverStyle = cur.cover ? "background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(" + cur.cover + ");background-size:cover;background-position:center;" : "";
+            var previewCover = cur.cover && window.siteImages ? window.siteImages.previewUrl(cur.cover) : cur.cover;
+            var coverStyle = previewCover ? "background-image:url(" + encodeURI(previewCover) + ");background-size:cover;background-position:center;" : "";
+            var titleLength = String(cur.title || "").length;
+            var titleClass = "cal-day__title";
+            if (titleLength > 26) {
+              titleClass += " cal-day__title--xlong";
+            } else if (titleLength > 14) {
+              titleClass += " cal-day__title--long";
+            }
 
             html += "<div class=\"cal-day cal-day--stream\" style=\"" + coverStyle + "\" data-date=\"" + dateStr + "\">";
             if (cur.topic && !(topic && category)) {
@@ -204,7 +257,7 @@
             }
             html += "<span class=\"cal-day__date\">" + dateStr + "</span>";
             html += "<span class=\"cal-day__time\">" + escapeHTML(cur.time) + "</span>";
-            html += "<span class=\"cal-day__title\">" + escapeHTML(cur.title) + "</span>";
+            html += "<span class=\"" + titleClass + "\">" + escapeHTML(cur.title) + "</span>";
             var hasPrev = cellStreamIdx[key] > 0;
             var hasNext = cellStreamIdx[key] < sorted.length - 1;
             if (hasPrev || hasNext) {

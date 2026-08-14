@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="點酥Susu 直播日历 — 历史直播归档">
   <title>直播日历 · 點酥き</title>
-  <link rel="stylesheet" href="css/style.css?v=20260804223000">
+  <link rel="stylesheet" href="css/style.css?v=20260815014500">
   <link rel="icon" href="assets/images/logo1.png">
 </head>
-<body class="body--fixed">
+<body class="body--fixed calendar-page">
   <nav class="site-nav" aria-label="站点导航">
     <div class="site-nav__inner">
       <a class="site-nav__brand" href="index.html"><span class="text-cn">點酥</span><span class="text-en">き</span></a>
@@ -18,15 +18,21 @@
         <li><a class="site-nav__link" href="fanworks.html">二创</a></li>
         <li><a class="site-nav__link" href="columns.html">专栏</a></li>
         <li><a class="site-nav__link" href="songs.html">歌</a></li>
-        <li><a class="site-nav__link site-nav__link--active" href="calendar.html">直播日历</a></li>
+        <li><a class="site-nav__link site-nav__link--active" href="calendar.html">直播</a></li>
       </ul>
     </div>
   </nav>
 
   <main class="page">
-    <h1 class="cal-title">直播日历</h1>
+    <h1 class="cal-title">直播</h1>
 
-    <section class="cal-card" aria-label="直播日历">
+    <nav class="cal-tabs" aria-label="直播页面切换">
+      <button class="cal-tabs__btn cal-tabs__btn--active" type="button" data-tab="calendar">直播日历</button>
+      <button class="cal-tabs__btn" type="button" data-tab="collections">专题合集</button>
+      <button class="cal-tabs__btn" type="button" data-tab="stats">数据统计</button>
+    </nav>
+
+    <section class="cal-card" id="cal-tab-calendar" aria-label="直播日历">
       <div class="dyn-filters">
         <input class="dyn-filters__input" type="search" id="filter-title" placeholder="搜索直播标题…" aria-label="搜索直播标题">
         <select class="dyn-filters__input cal-filter__select" id="filter-topic" aria-label="选题筛选">
@@ -45,6 +51,82 @@
         <!-- JS 渲染 -->
       </div>
     </section>
+
+    <section class="cal-card" id="cal-tab-collections" aria-label="专题合集" style="display:none">
+      <div class="dyn-filters">
+        <input class="dyn-filters__input" type="search" id="col-search" placeholder="搜索合集名称…" aria-label="搜索合集名称">
+        <select class="dyn-filters__input cal-filter__select" id="col-type" aria-label="按类型筛选">
+          <option value="">全部类型</option>
+        </select>
+      </div>
+
+      <p class="dyn-empty" id="col-empty" hidden>暂无合集。</p>
+      <div class="col-grid" id="col-grid" aria-label="合集列表">
+        <!-- JS 渲染 -->
+      </div>
+    </section>
+
+    <section class="cal-card" id="cal-tab-stats" aria-label="数据统计" style="display:none">
+      <div class="stats-range">
+        <div class="stats-range__dates">
+          <label class="stats-range__field">
+            <span class="stats-range__label">开始</span>
+            <input class="stats-range__date" type="date" id="stats-start" aria-label="开始日期">
+          </label>
+          <span class="stats-range__sep">——</span>
+          <label class="stats-range__field">
+            <span class="stats-range__label">结束</span>
+            <input class="stats-range__date" type="date" id="stats-end" aria-label="结束日期">
+          </label>
+        </div>
+        <div class="stats-range__presets" role="group" aria-label="时间范围快捷选择">
+          <button class="stats-range__btn stats-range__btn--active" type="button" data-days="7">最近7日</button>
+          <button class="stats-range__btn" type="button" data-days="30">最近30日</button>
+          <button class="stats-range__btn" type="button" data-days="365">最近1年</button>
+        </div>
+      </div>
+
+      <p class="dyn-empty stats-empty" id="stats-empty" hidden>该时间段暂无直播数据。</p>
+
+      <section class="stats-block" aria-label="直播频率图">
+        <h2 class="stats-block__title">直播频率</h2>
+        <div class="stats-heatmap">
+          <div class="stats-heatmap__scroll">
+            <div class="stats-heatmap__grid" id="stats-heatmap"></div>
+          </div>
+          <div class="stats-heatmap__legend" aria-hidden="true">
+            <span class="stats-heatmap__legend-label">Less</span>
+            <span class="stats-heatmap__cell"></span>
+            <span class="stats-heatmap__cell stats-heatmap__cell--1"></span>
+            <span class="stats-heatmap__cell stats-heatmap__cell--2"></span>
+            <span class="stats-heatmap__cell stats-heatmap__cell--3"></span>
+            <span class="stats-heatmap__cell stats-heatmap__cell--4"></span>
+            <span class="stats-heatmap__legend-label">More</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-block" aria-label="开播时间分布">
+        <h2 class="stats-block__title">开播时间分布</h2>
+        <div class="stats-chart" id="stats-hour-bar"></div>
+      </section>
+
+      <section class="stats-block" aria-label="开播时间变化">
+        <h2 class="stats-block__title">开播时间变化</h2>
+        <div class="stats-chart" id="stats-time-line"></div>
+      </section>
+
+      <section class="stats-block" aria-label="直播日期分布">
+        <h2 class="stats-block__title">直播日期分布</h2>
+        <div class="stats-chart stats-chart--pie" id="stats-weekday-pie"></div>
+      </section>
+
+      <section class="stats-block" aria-label="直播类型">
+        <h2 class="stats-block__title">直播类型</h2>
+        <div class="stats-chart stats-chart--pie" id="stats-topic-pie"></div>
+        <div class="stats-chart" id="stats-category-bar"></div>
+      </section>
+    </section>
   </main>
 
   <div class="page-scroll">
@@ -53,10 +135,14 @@
     </button>
   </div>
 
-  <script src="js/calendar-data.js?v=202608011630"></script>
-  <script src="js/calendar.js?v=20260804223000"></script>
-  <script src="js/main.js?v=20260804223000"></script>
-  <script src="js/fab.js?v=20260804223000"></script>
+  <script src="js/image-loader.js?v=20260814170500" defer></script>
+  <script src="js/calendar-data.js?v=202608011630" defer></script>
+  <script src="js/calendar.js?v=20260814170500" defer></script>
+  <script src="js/calendar-stats.js?v=20260813080000" defer></script>
+  <!-- collections-data.js（约 123KB）已改为懒加载：首次进入「专题合集」时由 calendar-collections.js 动态注入 -->
+  <script src="js/calendar-collections.js?v=20260814170500" defer></script>
+  <script src="js/main.js?v=20260804223000" defer></script>
+  <script src="js/fab.js?v=20260804223000" defer></script>
 <footer class="site-footer">
     <a href="https://beian.mps.gov.cn/#/query/webSearch?code=31011802006144" rel="noreferrer" target="_blank">
       <img src="assets/images/safety/beian.png" alt="" width="16" height="16">

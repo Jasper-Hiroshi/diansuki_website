@@ -5,7 +5,16 @@
       "Bash(mkdir -p d:/dsss_website/scripts && echo \"ok\")",
       "Bash(python -c ' *)",
       "Edit(/.claude/skills/cache-busting/**)",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(python scripts/add_stream.py)",
+      "Bash(python -c \"import sys; sys.path.insert\\(0, 'scripts'\\); from add_stream import load_data; data = load_data\\(\\); print\\(f'成功加载 {len\\(data\\)} 条记录'\\)\")",
+      "Bash(python scripts/fill_missing_fields.py)",
+      "Bash(node --check js/calendar-stats.js)",
+      "Bash(node --check js/collections-data.js)",
+      "Bash(node --check js/calendar-collections.js)",
+      "Bash(python -c \"import re,json; t=open\\('js/collections-data.js',encoding='utf-8'\\).read\\(\\); m=re.search\\(r'collectionsData\\\\s*=\\\\s*\\(\\\\{.*\\\\}\\);?\\\\s*\\\\$', t, re.DOTALL\\); d=json.loads\\(m.group\\(1\\)\\); print\\('collections:', [\\(c['name'], len\\(c['streams']\\)\\) for c in d['collections']]\\)\")",
+      "Bash(python -c \"import sys; sys.path.insert\\(0, 'scripts'\\); import add_collection; l = add_collection.load_calendar_lookup\\(\\); print\\('lookup entries:', len\\(l\\)\\); k = list\\(l.keys\\(\\)\\); print\\('first keys:', k[:5]\\); print\\('sample value keys:', sorted\\(l[k[0]].keys\\(\\)\\) if k else 'n/a'\\)\")",
+      "Bash(python -)"
     ],
     "additionalDirectories": [
       "d:\\dsss_website"

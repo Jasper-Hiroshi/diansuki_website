@@ -10,6 +10,10 @@
   var authorKeyword = "";
   var videoTitleKeyword = "";
 
+  function previewUrl(src) {
+    return window.siteImages ? window.siteImages.previewUrl(src) : src;
+  }
+
   /* ---- 按分类 + 作者过滤 ---- */
   function getFilteredData() {
     var data = fanworksData;
@@ -106,7 +110,7 @@
         var coverClass = "fw-group__cover" + (group.isVideo ? " fw-group__cover--video" : "");
         html += "<div class=\"fw-group\" data-user=\"" + uIdx + "\" data-group=\"" + globalGIdx + "\">";
         html += "<div class=\"" + coverClass + "\">";
-        html += "<img class=\"fw-group__img\" src=\"" + encodeURI(cover) + "\" alt=\"" + escapeHTML(group.title) + "\" loading=\"lazy\">";
+        html += "<img class=\"fw-group__img\" src=\"" + encodeURI(previewUrl(cover)) + "\" data-full-src=\"" + encodeURI(cover) + "\" alt=\"" + escapeHTML(group.title) + "\" loading=\"lazy\" decoding=\"async\">";
         if (group.isVideo) {
           html += "<span class=\"fw-group__play\">▶</span>";
         } else if (count > 1) {

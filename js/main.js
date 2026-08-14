@@ -5,28 +5,6 @@
 (function () {
   "use strict";
 
-  /* 首页 banner：11 张随机顺序轮播 */
-  var bannerTrack = document.getElementById("banner-track");
-  if (bannerTrack) {
-    var exts = ["jpg", "jpg", "jpg", "jpg", "jpg", "jpg", "jpg", "png", "jpg", "jpg", "jpg"];
-    var pool = [];
-    for (var i = 1; i <= 11; i++) {
-      pool.push("assets/images/display" + i + "." + exts[i - 1]);
-    }
-    /* Fisher-Yates 洗牌 */
-    for (var j = pool.length - 1; j > 0; j--) {
-      var r = Math.floor(Math.random() * (j + 1));
-      var tmp = pool[j]; pool[j] = pool[r]; pool[r] = tmp;
-    }
-    /* 双份用于无缝循环 */
-    var imgs = pool.concat(pool);
-    var trackHtml = "";
-    imgs.forEach(function (src) {
-      trackHtml += "<img class=\"hero__banner-img\" src=\"" + src + "\" alt=\"\" aria-hidden=\"true\">";
-    });
-    bannerTrack.innerHTML = trackHtml;
-  }
-
   /* 最新三条动态 */
   var grid = document.querySelector(".dynamics__grid");
   if (grid && typeof dynamicsData !== "undefined") {

@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="點酥Susu 歌单 — 歌曲合集">
   <title>歌 · 點酥き</title>
-  <link rel="stylesheet" href="css/style.css?v=20260804223000">
+  <link rel="stylesheet" href="css/style.css?v=20260815014500">
   <link rel="icon" href="assets/images/logo1.png">
 </head>
-<body>
+<body class="songs-page">
   <nav class="site-nav" aria-label="站点导航">
     <div class="site-nav__inner">
       <a class="site-nav__brand" href="index.html"><span class="text-cn">點酥</span><span class="text-en">き</span></a>
@@ -18,7 +18,7 @@
         <li><a class="site-nav__link" href="fanworks.html">二创</a></li>
         <li><a class="site-nav__link" href="columns.html">专栏</a></li>
         <li><a class="site-nav__link site-nav__link--active" href="songs.html">歌</a></li>
-        <li><a class="site-nav__link" href="calendar.html">直播日历</a></li>
+        <li><a class="site-nav__link" href="calendar.html">直播</a></li>
       </ul>
     </div>
   </nav>
@@ -39,24 +39,31 @@
 
   <div class="audio-bar" id="audio-bar" hidden>
     <div class="audio-bar__inner">
-      <button class="audio-bar__mode" id="audio-bar-mode" type="button">顺序</button>
-      <button class="audio-bar__prev" id="audio-bar-prev" type="button" title="上一首">⏮</button>
-      <button class="audio-bar__play" type="button" title="播放">▶</button>
-      <button class="audio-bar__next" id="audio-bar-next" type="button" title="下一首">⏭</button>
-      <img class="audio-bar__cover" id="audio-bar-cover" src="" alt="">
-      <div class="audio-bar__info">
-        <span class="audio-bar__song-title"></span>
-        <span class="audio-bar__note"></span>
+      <div class="audio-bar__identity">
+        <img class="audio-bar__cover" id="audio-bar-cover" src="" alt="">
+        <div class="audio-bar__info">
+          <span class="audio-bar__song-title"></span>
+          <span class="audio-bar__note"></span>
+        </div>
+      </div>
+      <div class="audio-bar__transport">
+        <button class="audio-bar__mode" id="audio-bar-mode" type="button">顺序</button>
+        <button class="audio-bar__prev" id="audio-bar-prev" type="button" title="上一首"><span class="player-icon player-icon--prev" aria-hidden="true"></span></button>
+        <button class="audio-bar__play" type="button" title="播放"><span class="player-icon player-icon--play" aria-hidden="true"></span></button>
+        <button class="audio-bar__next" id="audio-bar-next" type="button" title="下一首"><span class="player-icon player-icon--next" aria-hidden="true"></span></button>
+        <button class="audio-bar__playlist-btn" id="audio-bar-playlist-btn" type="button" title="播放列表"><span class="player-icon player-icon--list" aria-hidden="true"></span></button>
       </div>
       <div class="audio-bar__progress" id="audio-bar-progress">
         <div class="audio-bar__track">
           <div class="audio-bar__fill" id="audio-bar-fill"></div>
         </div>
       </div>
-      <span class="audio-bar__time" id="audio-bar-time">00:00/00:00</span>
-      <button class="audio-bar__playlist-btn" id="audio-bar-playlist-btn" type="button" title="播放列表">≡</button>
-      <input class="audio-bar__volume" id="audio-bar-volume" type="range" min="0" max="100" value="50" title="音量">
-      <button class="audio-bar__close" type="button" title="关闭">✕</button>
+      <div class="audio-bar__tools">
+        <span class="audio-bar__time" id="audio-bar-time">00:00/00:00</span>
+        <span class="audio-bar__volume-icon" aria-hidden="true"></span>
+        <input class="audio-bar__volume" id="audio-bar-volume" type="range" min="0" max="100" value="50" title="音量">
+        <button class="audio-bar__close" type="button" title="关闭"><span class="player-icon player-icon--close" aria-hidden="true"></span></button>
+      </div>
     </div>
     <audio id="audio-player" preload="auto"></audio>
   </div>
@@ -67,7 +74,7 @@
       <span class="playlist-panel__title">播放列表</span>
       <button class="playlist-panel__select-all" id="playlist-select-all" type="button">添加所有歌曲</button>
       <button class="playlist-panel__clear" id="playlist-clear" type="button">清空歌单</button>
-      <button class="playlist-panel__close" id="playlist-panel-close" type="button">✕</button>
+      <button class="playlist-panel__close" id="playlist-panel-close" type="button" title="关闭"><span class="player-icon player-icon--close" aria-hidden="true"></span></button>
     </div>
     <ul class="playlist-panel__list" id="playlist-panel-list"></ul>
   </div>
@@ -78,8 +85,9 @@
     </button>
   </div>
 
+  <script src="js/image-loader.js?v=20260814170500"></script>
   <script src="js/songs-data.js?v=202608011630"></script>
-  <script src="js/songs.js?v=20260804223000"></script>
+  <script src="js/songs.js?v=20260814170500"></script>
   <script src="js/main.js?v=20260804223000"></script>
   <script src="js/fab.js?v=20260804223000"></script>
 <footer class="site-footer">

@@ -63,7 +63,7 @@
   /* ---- 显示/隐藏底部播放器 ---- */
   function showAudioBar() {
     if (audioBar) audioBar.hidden = false;
-    document.body.style.paddingBottom = "70px";
+    document.body.style.paddingBottom = "104px";
   }
 
   function hideAudioBar() {
@@ -79,7 +79,11 @@
   function updatePlayIcon() {
     if (!audioBarPlayBtn) return;
     var paused = !(audioEl && !audioEl.paused);
-    audioBarPlayBtn.textContent = paused ? "▶" : "⏸";
+    var icon = audioBarPlayBtn.querySelector(".player-icon");
+    if (icon) {
+      icon.classList.toggle("player-icon--play", paused);
+      icon.classList.toggle("player-icon--pause", !paused);
+    }
     if (paused) {
       audioBarPlayBtn.classList.remove("audio-bar__play--paused");
     } else {
@@ -113,7 +117,7 @@
 
     var coverEl = document.getElementById("audio-bar-cover");
     if (coverEl) {
-      coverEl.src = coverUrl || "";
+      coverEl.src = coverUrl && window.siteImages ? window.siteImages.previewUrl(coverUrl) : (coverUrl || "");
       coverEl.style.display = coverUrl ? "" : "none";
     }
 
@@ -221,7 +225,7 @@
         html += "<span class=\"playlist-panel__item-title\">" + escapeHTML(item.songTitle) + "</span>";
         html += "<span class=\"playlist-panel__item-note\">" + escapeHTML(item.note) + "</span>";
         html += "</span>";
-        html += "<button class=\"playlist-panel__item-remove\" type=\"button\" data-index=\"" + i + "\" title=\"移除\">✕</button>";
+        html += "<button class=\"playlist-panel__item-remove\" type=\"button\" data-index=\"" + i + "\" title=\"移除\"><span class=\"player-icon player-icon--remove\" aria-hidden=\"true\"></span></button>";
         html += "</li>";
       });
     }
@@ -399,7 +403,8 @@
         var isOpen = idx === expandedIndex;
         html += "<li class=\"song-item" + (isOpen ? " song-item--open" : "") + "\">";
         html += "<button class=\"song-item__header\" type=\"button\" data-index=\"" + idx + "\">";
-        var thumbStyle = song.cover ? " style=\"background-image:url(" + encodeURI(song.cover) + ");background-size:cover;background-position:center\"" : "";
+        var thumbCover = song.cover && window.siteImages ? window.siteImages.previewUrl(song.cover) : song.cover;
+        var thumbStyle = thumbCover ? " style=\"background-image:url(" + encodeURI(thumbCover) + ");background-size:cover;background-position:center\"" : "";
         html += "<span class=\"song-item__thumb\"" + thumbStyle + " role=\"img\" aria-label=\"" + escapeHTML(song.title) + " 封面\"></span>";
         html += "<span class=\"song-item__title\">" + escapeHTML(song.title) + "</span>";
         html += "<span class=\"song-item__arrow\" aria-hidden=\"true\"></span>";
@@ -422,7 +427,7 @@
             html += "<span class=\"song-sub__actions\">";
 
             if (linkUrl) {
-              html += "<a class=\"song-sub__source\" href=\"" + encodeURI(linkUrl) + "\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"查看源切片/直播\">🔗</a>";
+              html += "<a class=\"song-sub__source\" href=\"" + encodeURI(linkUrl) + "\" target=\"_blank\" rel=\"noopener noreferrer\" title=\"查看源切片/直播\"><span class=\"player-icon player-icon--source\" aria-hidden=\"true\"></span></a>";
             }
 
             /* 添加到队列按钮 */
@@ -432,7 +437,7 @@
               + " data-audio=\"" + (audioUrl ? encodeURI(audioUrl) : "") + "\""
               + " data-link=\"" + (linkUrl ? encodeURI(linkUrl) : "") + "\""
               + " data-cover=\"" + (song.cover ? encodeURI(song.cover) : "") + "\""
-              + " title=\"添加到播放队列\">＋</button>";
+              + " title=\"添加到播放队列\"><span class=\"player-icon player-icon--queue\" aria-hidden=\"true\"></span></button>";
 
             /* 播放按钮 */
             html += "<button class=\"song-sub__play\" type=\"button\""
@@ -441,7 +446,7 @@
               + " data-audio=\"" + (audioUrl ? encodeURI(audioUrl) : "") + "\""
               + " data-link=\"" + (linkUrl ? encodeURI(linkUrl) : "") + "\""
               + " data-cover=\"" + (song.cover ? encodeURI(song.cover) : "") + "\""
-              + " title=\"播放\">▶</button>";
+              + " title=\"播放\"><span class=\"player-icon player-icon--play\" aria-hidden=\"true\"></span></button>";
 
             html += "</span>";
             html += "</li>";
@@ -493,8 +498,8 @@
         if (!audioUrl) return;
         addToQueue(songTitle, note, audioUrl, linkUrl, coverUrl);
         renderPlaylistPanel();
-        btn.textContent = "✓";
-        setTimeout(function () { btn.textContent = "＋"; }, 800);
+        btn.classList.add("song-sub__queue--added");
+        setTimeout(function () { btn.classList.remove("song-sub__queue--added"); }, 800);
       });
     });
   }

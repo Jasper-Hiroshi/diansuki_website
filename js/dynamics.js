@@ -15,6 +15,16 @@
   var filterKeyword = document.getElementById("filter-keyword");
   var scrollBtn = document.getElementById("scroll-more");
 
+  function previewUrl(src) {
+    return window.siteImages ? window.siteImages.previewUrl(src) : src;
+  }
+
+  function optimizedImage(src, className, alt, extra) {
+    var original = encodeURI(src);
+    var preview = encodeURI(previewUrl(src));
+    return "<img class=\"" + className + "\" src=\"" + preview + "\" data-full-src=\"" + original + "\" alt=\"" + (alt || "") + "\" loading=\"lazy\" decoding=\"async\" " + (extra || "") + ">";
+  }
+
   /* ---- 状态 ---- */
   var currentIndex = 0;
   var keyword = "";
@@ -66,7 +76,7 @@
       var compact = d.images.length > 3 ? " dyn-card__images--compact" : "";
       html += "<div class=\"dyn-card__images" + compact + "\">";
       d.images.forEach(function (src) {
-        html += "<img class=\"dyn-card__img\" src=\"" + encodeURI(src) + "\" alt=\"\" loading=\"lazy\">";
+        html += optimizedImage(src, "dyn-card__img", "", "");
       });
       html += "</div>";
     }
@@ -88,7 +98,7 @@
         }
         html += "<p class=\"dyn-repost__title\">" + escapeHTML(r.title) + "</p>";
         if (r.cover) {
-          html += "<img class=\"dyn-repost__cover\" src=\"" + encodeURI(r.cover) + "\" alt=\"\" loading=\"lazy\">";
+          html += optimizedImage(r.cover, "dyn-repost__cover", "", "");
         }
       } else {
         html += "<p class=\"dyn-card__text\">" + highlightMention(r.content) + "</p>";
@@ -96,7 +106,7 @@
           var rCompact = r.images.length > 3 ? " dyn-card__images--compact" : "";
           html += "<div class=\"dyn-card__images" + rCompact + "\">";
           r.images.forEach(function (src) {
-            html += "<img class=\"dyn-card__img\" src=\"" + encodeURI(src) + "\" alt=\"\" loading=\"lazy\">";
+            html += optimizedImage(src, "dyn-card__img", "", "");
           });
           html += "</div>";
         }
@@ -441,7 +451,7 @@
 
   function showLightbox(index) {
     lightboxIndex = index;
-    lightboxImg.src = lightboxImages[lightboxIndex].src;
+    lightboxImg.src = lightboxImages[lightboxIndex].getAttribute("data-full-src") || lightboxImages[lightboxIndex].src;
     resetLightboxTransform();
     document.getElementById("lb-prev").style.visibility = lightboxIndex > 0 ? "visible" : "hidden";
     document.getElementById("lb-next").style.visibility = lightboxIndex < lightboxImages.length - 1 ? "visible" : "hidden";
