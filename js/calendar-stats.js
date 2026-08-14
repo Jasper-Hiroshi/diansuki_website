@@ -401,16 +401,17 @@
   function buildHBar(items, color) {
     var max = Math.max.apply(null, items.map(function (i) { return i.value; }));
     if (max <= 0) max = 1;
-    var labelW = 130, barAreaW = 340, valueW = 60, rowH = 22, barH = 12;
+    var labelW = 175, barAreaW = 360, valueW = 60, rowH = 42, barH = 22;
     var W = labelW + barAreaW + valueW;
     var H = items.length * rowH + 6;
     var svg = "<svg viewBox=\"0 0 " + W + " " + H + "\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\">";
     items.forEach(function (item, i) {
       var y = i * rowH;
       var bw = item.value / max * barAreaW;
-      svg += "<text x=\"" + (labelW - 8) + "\" y=\"" + (y + barH - 2) + "\" text-anchor=\"end\" font-size=\"10\" fill=\"#000\">" + escapeHTML(item.label) + "</text>";
-      svg += "<rect x=\"" + labelW + "\" y=\"" + y + "\" width=\"" + bw.toFixed(2) + "\" height=\"" + barH + "\" rx=\"3\" fill=\"" + color + "\"><title>" + escapeHTML(item.label + "：" + item.value + " 场") + "</title></rect>";
-      svg += "<text x=\"" + (labelW + bw + 8) + "\" y=\"" + (y + barH - 2) + "\" font-size=\"9\" fill=\"#555\">" + item.value + "</text>";
+      svg += "<text class=\"stats-bar__label\" x=\"" + (labelW - 14) + "\" y=\"" + (y + barH - 1) + "\" text-anchor=\"end\" font-weight=\"800\" font-size=\"18\" fill=\"#151515\">" + escapeHTML(item.label) + "</text>";
+      svg += "<rect class=\"stats-bar__track\" x=\"" + labelW + "\" y=\"" + y + "\" width=\"" + barAreaW + "\" height=\"" + barH + "\" rx=\"6\" fill=\"rgba(21,21,21,0.08)\"/>";
+      svg += "<rect class=\"stats-bar__fill\" x=\"" + labelW + "\" y=\"" + y + "\" width=\"" + bw.toFixed(2) + "\" height=\"" + barH + "\" rx=\"6\" fill=\"" + color + "\"><title>" + escapeHTML(item.label + "：" + item.value + " 场") + "</title></rect>";
+      svg += "<text class=\"stats-bar__value\" x=\"" + (labelW + barAreaW + 14) + "\" y=\"" + (y + barH - 1) + "\" font-weight=\"900\" font-size=\"17\" fill=\"#151515\">" + item.value + "</text>";
     });
     svg += "</svg>";
     return svg;
