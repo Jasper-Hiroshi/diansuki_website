@@ -117,16 +117,6 @@
         var toggle = btn.querySelector(".col-item__toggle");
         var expanded = btn.getAttribute("aria-expanded") === "true";
 
-        /* 手风琴：收起其它所有合集，只展开当前一条 */
-        gridEl.querySelectorAll(".col-item__bar").forEach(function (other) {
-          if (other === btn) return;
-          other.setAttribute("aria-expanded", "false");
-          var t = other.querySelector(".col-item__toggle");
-          if (t) t.textContent = "展开";
-          var b = other.parentNode.querySelector(".col-item__body");
-          if (b) b.hidden = true;
-        });
-
         if (expanded) {
           btn.setAttribute("aria-expanded", "false");
           if (toggle) toggle.textContent = "展开";
