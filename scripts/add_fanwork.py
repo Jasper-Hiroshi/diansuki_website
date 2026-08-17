@@ -3,7 +3,7 @@
 为 fanworks-data.js 添加二创
 用法: python scripts/add_fanwork.py
 """
-import os, re, json, shutil
+import os, re, json, shutil, subprocess
 
 DATA_FILE = "js/fanworks-data.js"
 IMG_DIR   = "assets/images/creation"
@@ -99,20 +99,33 @@ def save_data(data):
         f.write(new_text)
 
 
-def copy_images(paths):
+def copy_image(path):
+    """复制单张图片；ffmpeg 可用时压缩为 WebP。"""
     os.makedirs(IMG_DIR, exist_ok=True)
-    result = []
-    for src in paths:
-        src = src.strip().strip('"').strip("'")
-        if not src or not os.path.exists(src):
-            print(f"  ⚠ 图片不存在，跳过: {src}")
-            continue
-        fname = os.path.basename(src)
-        dst = os.path.join(IMG_DIR, fname)
-        shutil.copy2(src, dst)
-        result.append(IMG_DIR.replace("\\", "/") + "/" + fname)
-        print(f"  ✓ 已复制: {fname}")
-    return result
+    src = path.strip().strip('"').strip("'")
+    if not src or not os.path.exists(src):
+        print(f"  ⚠ 图片不存在: {src}")
+        return ""
+
+    stem = os.path.splitext(os.path.basename(src))[0]
+    webp_name = stem + ".webp"
+    webp_dst = os.path.join(IMG_DIR, webp_name)
+    ffmpeg = shutil.which("ffmpeg")
+    if ffmpeg:
+        result = subprocess.run([
+            ffmpeg, "-y", "-i", src,
+            "-vf", "scale='min(960,iw)':-2",
+            "-c:v", "libwebp", "-quality", "72", webp_dst
+        ], capture_output=True, text=True)
+        if result.returncode == 0:
+            print(f"  ✓ 已压缩为 WebP: {webp_name}")
+            return IMG_DIR.replace("\\", "/") + "/" + webp_name
+
+    fname = os.path.basename(src)
+    dst = os.path.join(IMG_DIR, fname)
+    shutil.copy2(src, dst)
+    print(f"  ✓ 已复制: {fname}")
+    return IMG_DIR.replace("\\", "/") + "/" + fname
 
 
 def pick_tags():
@@ -166,14 +179,14 @@ def main():
         print("\n--- 视频信息 ---")
         print("封面图（文件路径）:")
         cover_input = input("> ").strip()
-        covers = copy_images([cover_input]) if cover_input else []
+        cover = copy_image(cover_input) if cover_input else ""
 
         link = input("视频源网址: ").strip()
 
         # 视频封面加播放标识，后续 tags 再补
         group = {
             "date": "",
-            "images": covers,
+            "images": [cover] if cover else [],
             "title": "",
             "link": link,
             "tags": [],
@@ -189,11 +202,13 @@ def main():
         group["title"] = title if title else "视频"
     else:
         print("\n--- 图片信息 ---")
-        print("图片（文件路径，多张用逗号分隔）:")
+        print("图片（文件路径，仅需 1 张）:")
         img_input = input("> ").strip()
-        img_paths = [p.strip() for p in img_input.split(",") if p.strip()] if img_input else []
+        image = copy_image(img_input) if img_input else ""
 
-        images = copy_images(img_paths)
+        print("图片右下角显示的数字（直接回车则不显示）:")
+        count_input = input("> ").strip()
+        display_count = int(count_input) if count_input.isdigit() else 0
 
         link = input("二创源网址: ").strip()
 
@@ -206,10 +221,11 @@ def main():
 
         group = {
             "date": date_str if date_str else "",
-            "images": images,
+            "images": [image] if image else [],
             "title": title if title else "",
             "link": link,
-            "tags": tags
+            "tags": tags,
+            "displayCount": display_count
         }
 
     # 点赞数
