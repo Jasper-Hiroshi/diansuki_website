@@ -7,6 +7,7 @@ import re
 import sys
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "js" / "songs-data.js"
@@ -35,6 +36,16 @@ def normalize_bv(value):
     if not BV_PATTERN.fullmatch(normalized):
         raise ValueError("BV号格式不正确")
     return "BV" + normalized[2:]
+
+
+def validate_bilibili_link(value):
+    link = value.strip()
+    parsed = urlparse(link)
+    host = parsed.netloc.lower()
+    valid_hosts = {"bilibili.com", "www.bilibili.com", "m.bilibili.com", "b23.tv", "www.b23.tv"}
+    if parsed.scheme != "https" or host not in valid_hosts:
+        raise ValueError("请输入完整的哔哩哔哩链接")
+    return link
 
 
 def validate_date(value):
@@ -114,18 +125,27 @@ def interactive_main():
             print("未添加子条目，数据保持不变。")
         return
 
-    item = {
-        "date": validate_date(date_input),
-        "bv": normalize_bv(required("BV号: ")),
-    }
-    if item in song.setdefault("items", []):
-        print("该日期和BV号已存在，未重复写入。")
+    date = validate_date(date_input)
+    if any(entry.get("date") == date for entry in song.get("items", [])):
+        print("已添加过")
         return
+
+    item = {
+        "date": date,
+    }
+    has_parts = required("是否有分P（y/n）: ").lower()
+    if has_parts in {"y", "yes", "是"}:
+        item["link"] = validate_bilibili_link(required("完整哔哩哔哩链接: "))
+    elif has_parts in {"", "n", "no", "否"}:
+        item["bv"] = normalize_bv(required("BV号: "))
+    else:
+        raise ValueError("请输入 y 或 n")
 
     song["items"].append(item)
     song["items"].sort(key=lambda entry: entry.get("date", ""))
     write_data(text, match, data)
-    print(f"已写入：{song['title']} / {item['date']} / {item['bv']}")
+    source = item.get("link") or item["bv"]
+    print(f"已写入：{song['title']} / {item['date']} / {source}")
 
 
 def main():

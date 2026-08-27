@@ -19,6 +19,14 @@
     return song.title + "::" + index;
   }
 
+  function sourceHref(item) {
+    var link = String(item.link || "").trim();
+    if (/^https:\/\/(?:www\.|m\.)?bilibili\.com\//i.test(link) || /^https:\/\/b23\.tv\//i.test(link)) {
+      return link;
+    }
+    return "https://www.bilibili.com/video/" + encodeURIComponent(String(item.bv || "").trim());
+  }
+
   function fillGenres() {
     var genres = [];
     songsData.songs.forEach(function (song) {
@@ -67,11 +75,10 @@
       }) : [];
       var detailId = "song-detail-" + entry.index;
       var details = items.map(function (item) {
-        var bv = String(item.bv || "").trim();
-        var href = "https://www.bilibili.com/video/" + encodeURIComponent(bv);
+        var href = sourceHref(item);
         return '<li class="song-sub">'
           + '<time class="song-sub__date" datetime="' + escapeHTML(item.date) + '">' + escapeHTML(item.date) + '</time>'
-          + '<a class="song-sub__source" href="' + href + '" target="_blank" rel="noopener noreferrer" aria-label="在哔哩哔哩查看">'
+          + '<a class="song-sub__source" href="' + escapeHTML(href) + '" target="_blank" rel="noopener noreferrer" aria-label="在哔哩哔哩查看">'
           + '<img src="' + bilibiliIcon + '" alt="" width="30" height="30">'
           + '</a></li>';
       }).join("");
