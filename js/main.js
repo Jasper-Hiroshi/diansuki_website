@@ -1,6 +1,4 @@
-/**
- * diansss.com — 首页脚本（占位数据，无 API）
- */
+/** diansss.com — 首页脚本 */
 
 (function () {
   "use strict";
@@ -37,20 +35,44 @@
   var followerCountEl = document.getElementById("follower-count");
 
   if (followerCountEl) {
-    fetch("https://api.codetabs.com/v1/proxy/?quest=" + encodeURIComponent("https://api.bilibili.com/x/relation/stat?vmid=1323355750"))
+    fetch("https://api.codetabs.com/v1/proxy/?quest=" + encodeURIComponent("https://space.bilibili.com/1323355750"))
       .then(function (response) {
         if (!response.ok) throw new Error("HTTP " + response.status);
-        return response.json();
+        return response.text();
       })
-      .then(function (json) {
-        if (json.code === 0 && json.data && typeof json.data.follower === "number") {
-          followerCountEl.textContent = json.data.follower.toLocaleString();
+      .then(function (html) {
+        var doc = new DOMParser().parseFromString(html, "text/html");
+        var countNode = doc.querySelector("span.nav-statistics__item-num[title]");
+        if (countNode) {
+          var count = Number(countNode.getAttribute("title").replace(/,/g, ""));
+          if (Number.isFinite(count)) followerCountEl.textContent = count.toLocaleString("zh-CN");
         }
       })
       .catch(function () {
         /* 请求失败时保留 HTML 中的占位数字，不做替换 */
       });
   }
+
+  /* 纪念日：以访客本地日期为准，今天遇到纪念日时显示 0 天。 */
+  var today = new Date();
+  var todayDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  var oneDay = 24 * 60 * 60 * 1000;
+
+  function daysUntil(month, day) {
+    var target = new Date(todayDate.getFullYear(), month - 1, day);
+    if (target < todayDate) target.setFullYear(target.getFullYear() + 1);
+    return Math.round((target - todayDate) / oneDay);
+  }
+
+  var debutDaysEl = document.getElementById("debut-days");
+  var birthdayDaysEl = document.getElementById("birthday-days");
+  var anniversaryDaysEl = document.getElementById("anniversary-days");
+  if (debutDaysEl) {
+    var debutDate = new Date(2024, 6, 16);
+    debutDaysEl.textContent = Math.floor((todayDate - debutDate) / oneDay) + 1;
+  }
+  if (birthdayDaysEl) birthdayDaysEl.textContent = daysUntil(10, 20);
+  if (anniversaryDaysEl) anniversaryDaysEl.textContent = daysUntil(7, 16);
 
   /* 底部按钮：有 data-next 则跳转，否则滚动回顶部 */
   var scrollBtn = document.getElementById("scroll-more");

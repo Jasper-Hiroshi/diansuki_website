@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="點酥Susu — 个人粉丝站">
   <title>點酥き</title>
-  <link rel="stylesheet" href="css/style.css?v=20260817183000">
+  <link rel="stylesheet" href="css/style.css?v=20260901172000">
   <link rel="icon" href="assets/images/logo1.png">
 </head>
 <body class="index-home">
@@ -26,14 +26,16 @@
   <header class="hero">
     <div class="hero__inner">
       <div class="hero__profile">
-        <img
-          class="hero__avatar"
-          src="assets/images/avatar.png"
-          alt="点酥Susu 头像"
-          width="288"
-          height="288"
-          decoding="async"
-        >
+        <div class="hero__portrait">
+          <img
+            class="hero__avatar"
+            src="assets/images/avatar.png"
+            alt="点酥Susu 头像"
+            width="288"
+            height="288"
+            decoding="async"
+          >
+        </div>
         <h1 class="hero__name"><span class="text-cn">点酥</span><span class="text-en">Susu</span></h1>
       </div>
     </div>
@@ -58,15 +60,47 @@
           <img class="intro__link-icon" src="assets/images/icon-marshmallow.svg" alt="" width="20" height="20" aria-hidden="true">
           <span>棉花糖</span>
         </a>
+        <a class="intro__link intro__link--moegirl" href="https://zh.moegirl.org.cn/%E7%82%B9%E9%85%A5" target="_blank" rel="noopener noreferrer">
+          <img class="intro__link-icon" src="assets/images/icon-moegirlpedia.svg" alt="" width="24" height="24" aria-hidden="true">
+          <span>萌娘百科</span>
+        </a>
       </nav>
-      <p class="intro__followers">
-        <span class="intro__followers-label">已炼化</span>
-        <span class="intro__followers-count" id="follower-count">108,888</span>
-        <span class="intro__followers-label">兵马酥</span>
-      </p>
-      <div class="catchphrase" aria-live="polite">
-        <p class="catchphrase__text" id="catchphrase-text">算卦看相，童叟无欺！</p>
+      <div class="intro__summary">
+        <p class="intro__followers">
+          <span class="intro__followers-label">已炼化</span>
+          <span class="intro__followers-count" id="follower-count">108,740</span>
+          <span class="intro__followers-label">兵马酥</span>
+        </p>
+        <div class="catchphrase" aria-live="polite">
+          <p class="catchphrase__text" id="catchphrase-text">算卦看相，童叟无欺！</p>
+        </div>
       </div>
+      <div class="anniversaries" aria-label="纪念日倒计时">
+        <p class="anniversary-card"><span class="anniversary-card__label">已出道</span><strong id="debut-days">—</strong><span>天</span></p>
+        <p class="anniversary-card"><span class="anniversary-card__label">距生日还有</span><strong id="birthday-days">—</strong><span>天</span></p>
+        <p class="anniversary-card"><span class="anniversary-card__label">距周年还有</span><strong id="anniversary-days">—</strong><span>天</span></p>
+      </div>
+      <article class="profile-card" aria-labelledby="profile-heading">
+        <h2 class="profile-card__heading" id="profile-heading">个人介绍</h2>
+        <div class="profile-card__body">
+          <p>算卦看相，童叟无欺！<br>
+          你好，我是来自山中守墓家族的点酥！<br>
+          身上总带着长着眼睛的八卦镜，里面封印的是因缘巧合下相识的老曹。<br>
+          目前，曹家遭遇变故，酥酥为寻找仇家真面目，再次下山，漂泊江湖，伪装身份潜入各处帮派。</p>
+          <p>任务在身，一般能暂时喘息与诸位相见的时间在子时【凌晨】，具体会期与时间【不定】，届时另以书信相告。<br>
+          相见聊的内容往往是江湖奇味、各地民俗异闻、术力口、特摄等等。<br>
+          有时候也唱唱喜欢的小曲，玩玩游戏，以及看恐怖片、蒙面好汉、超人打怪兽。</p>
+          <dl class="profile-card__facts">
+            <div><dt>歌单专栏</dt><dd><a class="profile-card__tag-link" href="https://www.bilibili.com/opus/1156882533943607303/?from=readlist" target="_blank" rel="noopener noreferrer">点酥Susu现在会唱的一些歌</a></dd></div>
+            <div><dt>代表颜色</dt><dd>#FCE56B</dd></div>
+            <div><dt>代表emoji</dt><dd>☯🔔</dd></div>
+            <div><dt>粉丝名</dt><dd>兵马酥</dd></div>
+            <div><dt>粉丝形象</dt><dd>桂花馅糯米团</dd></div>
+            <div><dt>粉丝TAG</dt><dd><a class="profile-card__tag-link" href="https://www.bilibili.com/v/topic/detail?topic_id=1206982&amp;topic_name=%E7%82%B9%E9%85%A5%E7%9A%84%E5%85%B5%E9%A9%AC%E6%8C%87%E6%8C%A5%E5%8F%B8&amp;spm_id_from=333.1365.list.card_topic.click" target="_blank" rel="noopener noreferrer">#点酥的兵马指挥司#</a></dd></div>
+          </dl>
+          <p class="profile-card__notice">❗❗没有任何的官方粉丝群，江湖相聚仅在直播间</p>
+        </div>
+      </article>
     </section>
 
     <section class="dynamics" aria-labelledby="dynamics-heading">
@@ -105,7 +139,7 @@
 
   <script src="js/image-loader.js?v=20260814170500"></script>
   <script src="js/dynamics-data.js?v=202608011630"></script>
-  <script src="js/main.js?v=20260804223000"></script>
+  <script src="js/main.js?v=20260901153000"></script>
   <script src="js/fab.js?v=20260804223000"></script>
 <footer class="site-footer">
     <a href="https://beian.mps.gov.cn/#/query/webSearch?code=31011802006144" rel="noreferrer" target="_blank">
