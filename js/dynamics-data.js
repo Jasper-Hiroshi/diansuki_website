@@ -16,6 +16,22 @@
  */
 var dynamicsData = [
   {
+    "date": "2026-09-02",
+    "dynamics": [
+      {
+        "time": "21:58",
+        "content": "去见了miku酱",
+        "link": "https://t.bilibili.com/1243475233588903937?spm_id_from=333.1387.0.0",
+        "repost": {
+          "title": "去见了miku酱",
+          "link": "https://www.bilibili.com/video/BV14btU6REYb/?spm_id_from=333.1368.list.card_archive.click&vd_source=b8a59f2c03640b29b3a1e7d14bdf635a",
+          "type": "post_video",
+          "cover": "assets/images/dynamics/26_09_02.jpg"
+        }
+      }
+    ]
+  },
+  {
     "date": "2026-07-28",
     "dynamics": [
       {
