@@ -16,6 +16,19 @@
  */
 var dynamicsData = [
   {
+    "date": "2026-09-03",
+    "dynamics": [
+      {
+        "time": "22:39",
+        "content": "任务路上发现的东西…\n舌头尝到的是甜的但是反上来的辣味特别呛鼻子和喉咙口…\n到底为什么会诞生这么奇怪的甜品\n而且为什么我第一眼看到就毫不犹豫地买下了它…",
+        "link": "https://www.bilibili.com/opus/1243856815707389956?spm_id_from=333.1365.0.0",
+        "images": [
+          "assets/images/dynamics/26_09_03.avif"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-02",
     "dynamics": [
       {
