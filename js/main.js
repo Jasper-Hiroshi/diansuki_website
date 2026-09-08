@@ -33,24 +33,28 @@
 
   /* 粉丝数 */
   var followerCountEl = document.getElementById("follower-count");
+  var followerApiUrl = "https://api-fc.vjoi.cn/status?mid=1323355750&room=1766907940";
 
-  if (followerCountEl) {
-    fetch("https://api.codetabs.com/v1/proxy/?quest=" + encodeURIComponent("https://space.bilibili.com/1323355750"))
+  function updateFollowerCount() {
+    fetch(followerApiUrl)
       .then(function (response) {
         if (!response.ok) throw new Error("HTTP " + response.status);
-        return response.text();
+        return response.json();
       })
-      .then(function (html) {
-        var doc = new DOMParser().parseFromString(html, "text/html");
-        var countNode = doc.querySelector("span.nav-statistics__item-num[title]");
-        if (countNode) {
-          var count = Number(countNode.getAttribute("title").replace(/,/g, ""));
-          if (Number.isFinite(count)) followerCountEl.textContent = count.toLocaleString("zh-CN");
-        }
+      .then(function (data) {
+        var count = Number(data.follower);
+        if (!Number.isSafeInteger(count) || count < 0) throw new Error("Invalid follower count");
+        followerCountEl.textContent = count.toLocaleString("zh-CN");
+        followerCountEl.removeAttribute("title");
       })
       .catch(function () {
-        /* 请求失败时保留 HTML 中的占位数字，不做替换 */
+        followerCountEl.title = "粉丝数暂时获取失败，请稍后刷新";
       });
+  }
+
+  if (followerCountEl) {
+    updateFollowerCount();
+    window.setInterval(updateFollowerCount, 10 * 60 * 1000);
   }
 
   /* 纪念日：以访客本地日期为准，今天遇到纪念日时显示 0 天。 */
