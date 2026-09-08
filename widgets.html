@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="點酥Susu 小组件 — 实用工具合集">
   <title>小组件 · 點酥き</title>
-  <link rel="stylesheet" href="css/style.css?v=20260901172000">
+  <link rel="stylesheet" href="css/style.css?v=20260908164606">
   <link rel="icon" href="assets/images/logo1.png">
 </head>
 <body class="widgets-page">
@@ -25,11 +25,38 @@
 
   <main class="page">
     <section class="widgets" aria-label="小组件列表">
-      <p class="widgets__empty">正在开发中QAQ</p>
       <ul class="widgets__grid">
+        <li>
+          <button class="widget-card widget-card--wardrobe" type="button" id="open-wardrobe" aria-haspopup="dialog" aria-controls="wardrobe-dialog">
+            <strong class="widget-card__label">酥衣柜</strong>
+          </button>
+        </li>
       </ul>
     </section>
   </main>
+
+  <div class="wardrobe-dialog" id="wardrobe-dialog" role="dialog" aria-modal="true" aria-labelledby="wardrobe-title" hidden>
+    <section class="wardrobe-panel">
+      <header class="wardrobe-panel__header">
+        <div class="wardrobe-panel__title-wrap">
+          <img class="wardrobe-panel__avatar" src="assets/images/logo2.png" alt="" width="52" height="52">
+          <h1 class="wardrobe-panel__title" id="wardrobe-title">酥衣柜</h1>
+        </div>
+        <button class="wardrobe-panel__close" type="button" id="close-wardrobe" aria-label="关闭酥衣柜">
+          <span aria-hidden="true">×</span>
+        </button>
+      </header>
+
+      <div class="wardrobe-stage" role="group" aria-label="衣装列表">
+        <figure class="wardrobe-look">
+          <img class="wardrobe-look__img" src="assets/images/widgets/wardrobe/1.png" alt="點酥Susu 棕金色国风衣装" width="1080" height="2342" loading="lazy" decoding="async">
+        </figure>
+        <figure class="wardrobe-look">
+          <img class="wardrobe-look__img" src="assets/images/widgets/wardrobe/2.png" alt="點酥Susu 白金色休闲衣装" width="1080" height="2342" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+  </div>
 
   <div class="page-scroll">
     <button class="page-scroll__btn" type="button" id="scroll-more" aria-label="下一页面" data-next="fanworks.html">
@@ -39,6 +66,7 @@
 
   <script src="js/image-loader.js?v=20260814170500"></script>
   <script src="js/main.js?v=20260901153000"></script>
+  <script src="js/widgets.js?v=20260908151218"></script>
   <script src="js/fab.js?v=20260804223000"></script>
 <footer class="site-footer">
     <a href="https://beian.mps.gov.cn/#/query/webSearch?code=31011802006144" rel="noreferrer" target="_blank">
