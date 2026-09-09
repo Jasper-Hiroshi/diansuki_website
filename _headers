@@ -6,16 +6,16 @@
   Content-Security-Policy: base-uri 'self'; object-src 'none'; frame-ancestors 'self'
 
 /
-  Cache-Control: no-store
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
 
 /:page
-  Cache-Control: no-store
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
 
 /css/*
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
 
 /js/*
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: no-store, no-cache, must-revalidate, max-age=0
 
 /assets/images/previews/*
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
