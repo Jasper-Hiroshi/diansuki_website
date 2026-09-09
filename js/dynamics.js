@@ -394,7 +394,7 @@
   function highlightMention(text) {
     var escaped = escapeHTML(text);
     escaped = escaped.replace(/@点酥Susu/g, "<span class=\"mention\">@点酥Susu</span>");
-    escaped = escaped.replace(/@恋老吧吧主/g, "<span class=\"mention\">@恋老吧吧主</span>");
+    escaped = escaped.replace(/@恋老吧吧主/g, "<span class=\"mention mention--blue\">@恋老吧吧主</span>");
     escaped = escaped.replace(/@雨纪_Ameki/g, "<span class=\"mention\">@雨纪_Ameki</span>");
     escaped = escaped.replace(/@花礼Harei/g, "<span class=\"mention\">@花礼Harei</span>");
     escaped = escaped.replace(/@明灯盏盏zzz​/g, "<span class=\"mention mention--blue\">@明灯盏盏zzz</span>");
