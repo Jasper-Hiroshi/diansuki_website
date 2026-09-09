@@ -1201,9 +1201,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 .dynamics-page .dyn-card__footer { margin-top: 1rem; padding-left: calc(56px + 1rem); }
 .dynamics-page .dyn-card__source { min-height: 42px; padding: 0.55rem 1.05rem; border-radius: 2px 12px 2px 12px; box-shadow: 3px 3px 0 var(--dyn-ink); }
 .dynamics-page .dyn-card__images { gap: 0.75rem; margin-top: 1rem; }
-.dynamics-page .dyn-card__img { border-width: 3px; border-radius: 4px 16px 4px 16px; box-shadow: 4px 4px 0 var(--dyn-ink); cursor: zoom-in; }
+.dynamics-page .dyn-card__img { border-width: 3px; border-radius: 4px 16px 4px 16px; box-shadow: 4px 4px 0 var(--dyn-ink); }
 .dynamics-page .dyn-repost { margin-top: 1rem; margin-left: calc(56px + 1rem); padding: 1.15rem 1.3rem; background: #f4f1df; border-radius: 4px 18px 4px 18px; box-shadow: 4px 4px 0 var(--dyn-ink); }
-.dynamics-page .dyn-repost__cover { margin-top: 0.75rem; border-radius: 4px 14px 4px 14px; cursor: zoom-in; }
+.dynamics-page .dyn-repost__cover { margin-top: 0.75rem; border-radius: 4px 14px 4px 14px; }
 .dynamics-page .page-scroll__btn { width: 60px; height: 60px; border-radius: 50%; box-shadow: 5px 5px 0 var(--dyn-ink); }
 
 @media (max-width: 768px) {

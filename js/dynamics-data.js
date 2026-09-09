@@ -16,6 +16,154 @@
  */
 var dynamicsData = [
   {
+    "date": "2026-09-09",
+    "dynamics": [
+      {
+        "time": "13:03",
+        "content": "充满了夏天和快乐的气息！透过图片和文字狠狠感受到了！兵马酥带我去好多地方玩真的好开心！！！\n我是小皇帝.jpg",
+        "link": "https://t.bilibili.com/1245934892668157957?spm_id_from=333.1365.0.0",
+        "repost": {
+          "id": "阿鱼今天摸了吗",
+          "content": "带酥酥来济南玩啦！\n第一站是趵突泉！\n人好多！比鱼还多！！简直要走不动了  好在泉水还是好康的，好清好清的水，好肥好肥的鱼！趵突泉的鱼果然名不虚传，胖得像炮弹一样hhhh  趵突泉本泉旁边的人更是多！费了九牛二虎之力才挤进去拍到！不过还吃了抹茶冰激凌可丽饼！里面的香蕉跟抹茶冰激凌的味道融合的好棒！第一次吃可丽饼，原来是这样的味道，很不错哎！\n\n第二站是芙蓉街！\n恭迎酥大帝归位！(bushi)  有好多好多(重复的)小吃摊！还有好多奇妙的店，看到了巧克力博物馆，里面有好大的巧克力造景哎  本来还怀疑是假的但是凑近闻了闻发现是香香的，是真的巧克力！还有金桔超级工厂门口的桔皮瀑布！好香的柑橘香味！还在特产店看到了黄精小酥hhhh  那很黄了()买了桂花酒酿冰汤圆！冰冰凉凉软软糯糯带着糖桂花和酒酿的香气，拌匀之后不会很甜，吃起来好清爽！\n\n第三站是大明湖！\n虽然前面耽搁了一会，一路走到这里来已经没有时间进去逛了，但至少还来得及打卡！陛下，您还记得大明湖畔的兵马酥吗\n\n难得有机会来外面玩，希望能把快乐传递给酥酥！不过真的好累哈哈哈哈",
+          "link": "https://www.bilibili.com/opus/1239394580874395654?spm_id_from=333.1365.0.0",
+          "images": [
+            "assets/images/dynamics/26_09_09_30.avif",
+            "assets/images/dynamics/26_09_09_31.avif",
+            "assets/images/dynamics/26_09_09_32.avif",
+            "assets/images/dynamics/26_09_09_33.avif",
+            "assets/images/dynamics/26_09_09_34.avif",
+            "assets/images/dynamics/26_09_09_35.avif",
+            "assets/images/dynamics/26_09_09_36.avif",
+            "assets/images/dynamics/26_09_09_37.avif",
+            "assets/images/dynamics/26_09_09_38.avif",
+            "assets/images/dynamics/26_09_09_39.avif",
+            "assets/images/dynamics/26_09_09_40.avif",
+            "assets/images/dynamics/26_09_09_41.avif",
+            "assets/images/dynamics/26_09_09_42.avif",
+            "assets/images/dynamics/26_09_09_43.avif",
+            "assets/images/dynamics/26_09_09_44.avif",
+            "assets/images/dynamics/26_09_09_45.avif",
+            "assets/images/dynamics/26_09_09_46.avif",
+            "assets/images/dynamics/26_09_09_47.avif"
+          ]
+        }
+      },
+      {
+        "time": "13:01",
+        "content": "今年也感谢冰美式的大家！！！！！！！！！！！",
+        "link": "https://t.bilibili.com/1245934351508570128?spm_id_from=333.1365.0.0",
+        "repost": {
+          "id": "恋老吧吧主",
+          "content": "点酥Susu二周年无料的详情图来啦！\n大家好！这边是『冰美式制作组』！\n是主播 @点酥Susu​ 的“普通粉丝结社”，希望制作与她相关的内容和无料谷。\n\n点酥Susu二周年无料的详情图来啦！\n① 点酥Susu 《らしさ》主题吧唧 1枚\n② 点酥Susu 表情包&合绘 主题贴纸 若干张\n（『冰美式制作组』联合 @明灯盏盏zzz​ ，制作了一套点酥Susu的新表情包14枚，加上@AAA兵部杂鱼小张​ 和明灯盏盏zzz的合绘、《らしさ》主视觉图，共同置入一套贴纸上）\n③ 点酥Susu 《らしさ》主题打卡立牌 1套共3支\n④ 点酥Susu 冰霜银烫色邮票 1张（由 @一只弥鸢​ 老师提供）\n⑤ 点酥Susu《サリシノハラ》主题吧唧1枚+像素小立牌1枚(A/B款)（由 @阿鱼今天摸了吗​ 老师提供） \n\n本期获赠标准、统计出来的成员名单2页等重要提示，都在第7~9张图中！大家可以点开长图查看！\n\n感谢各位一直以来对她的守护陪伴，和对『冰美式制作组』的支持！让我们下次再见！",
+          "link": "https://www.bilibili.com/opus/1239347175205371940?spm_id_from=333.1365.0.0",
+          "images": [
+            "assets/images/dynamics/26_09_09_21.avif",
+            "assets/images/dynamics/26_09_09_22.avif",
+            "assets/images/dynamics/26_09_09_23.avif",
+            "assets/images/dynamics/26_09_09_24.avif",
+            "assets/images/dynamics/26_09_09_25.avif",
+            "assets/images/dynamics/26_09_09_26.avif",
+            "assets/images/dynamics/26_09_09_27.avif",
+            "assets/images/dynamics/26_09_09_28.avif",
+            "assets/images/dynamics/26_09_09_29.avif"
+          ]
+        }
+      },
+      {
+        "time": "13:00",
+        "content": "酥酥去征服新地图了！！谢谢你点了鸳鸯锅(๑>؂<๑）",
+        "link": "https://t.bilibili.com/1245934098098159670?spm_id_from=333.1365.0.0",
+        "repost": {
+          "id": "叶羽yusu",
+          "content": "带着酥酥去重庆玩了！！！去了老君洞！拍了很好看的风景！吃了很香的火锅！希望酥酥也要每天开开心心的",
+          "link": "https://www.bilibili.com/opus/1237504026449281045?spm_id_from=333.1365.0.0",
+          "images": [
+            "assets/images/dynamics/26_09_09_12.avif",
+            "assets/images/dynamics/26_09_09_13.avif",
+            "assets/images/dynamics/26_09_09_14.avif",
+            "assets/images/dynamics/26_09_09_15.avif",
+            "assets/images/dynamics/26_09_09_16.avif",
+            "assets/images/dynamics/26_09_09_17.avif",
+            "assets/images/dynamics/26_09_09_18.avif",
+            "assets/images/dynamics/26_09_09_19.avif",
+            "assets/images/dynamics/26_09_09_20.avif"
+          ]
+        }
+      },
+      {
+        "time": "12:59",
+        "content": "谐音的网站名字好喜欢！！分类也好细！！超级辛苦了！！！！！！！！！！！",
+        "link": "https://t.bilibili.com/1245933823192989703?spm_id_from=333.1365.0.0",
+        "repost": {
+          "id": "Jasperひろし",
+          "content": "网站补完了直播日历和专题合集\n感谢@恋老吧吧主 ​和各位bms们提供的数据！目前已经将过往的录播做了收集和整理，希望能帮助到大家，在酥酥忙碌的日子里也能得到一些陪伴(比如看看聊斋合集或者恐怖故事合集\n\n网址：diansuki.cn\n           global.diansuki.cn",
+          "link": "https://www.bilibili.com/opus/1236367195896807477?spm_id_from=333.1365.0.0",
+          "images": [
+            "assets/images/dynamics/26_09_09_10.avif",
+            "assets/images/dynamics/26_09_09_11.avif"
+          ]
+        }
+      },
+      {
+        "time": "12:58",
+        "content": "这个像在燃烧自己斗法！好激烈的战斗！！",
+        "link": "https://t.bilibili.com/1245933548335005717?spm_id_from=333.1365.0.0",
+        "repost": {
+          "id": "被子今天也想打桌游",
+          "content": "悲伤 没烫好 变成了破碎得快要死掉的酥酥了",
+          "link": "https://www.bilibili.com/opus/1234254102032023552?spm_id_from=333.1365.0.0",
+          "images": [
+            "assets/images/dynamics/26_09_09_9.avif"
+          ]
+        }
+      },
+      {
+        "time": "12:57",
+        "content": "两套衣服都有！都好可爱！！！！！！！(´；ω；`)",
+        "link": "https://t.bilibili.com/1245933342168186885?spm_id_from=333.1365.0.0",
+        "repost": {
+          "id": "心碎碎子",
+          "content": "为酥酥约了拼豆小人！\n俺还没有拼过实物，不知道会不会有色差，如果有色差的话大家可以自己改改颜色！老曹版本的话可以自己替换眼睛颜色！！",
+          "link": "https://www.bilibili.com/opus/1233387304614101000?spm_id_from=333.1365.0.0",
+          "images": [
+            "assets/images/dynamics/26_09_09_3.avif",
+            "assets/images/dynamics/26_09_09_4.avif",
+            "assets/images/dynamics/26_09_09_5.avif",
+            "assets/images/dynamics/26_09_09_6.avif",
+            "assets/images/dynamics/26_09_09_7.avif",
+            "assets/images/dynamics/26_09_09_8.avif"
+          ]
+        }
+      },
+      {
+        "time": "12:56",
+        "content": "向日葵！！！好可爱！！！！喜欢！！",
+        "link": "https://t.bilibili.com/1245933097344565266?spm_id_from=333.1365.0.0",
+        "repost": {
+          "id": "秞荼yo",
+          "content": "泳装酥\n\n\n其实早就画了但是感觉翻车了一直没发\n不会设计果咩捏\n@点酥Susu",
+          "link": "https://www.bilibili.com/opus/1233386956725944327?spm_id_from=333.1365.0.0",
+          "images": [
+            "assets/images/dynamics/26_09_09_2.avif"
+          ]
+        }
+      },
+      {
+        "time": "12:55",
+        "content": "好可爱呀圆圆的小蛋糕圆圆的脑袋圆圆的兵马酥，会是什么呢٩(๛ ˘ ³˘)۶❤",
+        "link": "https://t.bilibili.com/1245932758061023256?spm_id_from=333.1365.0.0",
+        "repost": {
+          "id": "晴川暮白白",
+          "content": "准备弄点新业务，先拿酥酥试手一下！😋萌萌@点酥Susu",
+          "link": "https://www.bilibili.com/opus/1245350807149215750?spm_id_from=333.1368.0.0",
+          "images": [
+            "assets/images/dynamics/26_09_09_1.avif"
+          ]
+        }
+      }
+    ]
+  },
+  {
     "date": "2026-09-03",
     "dynamics": [
       {
